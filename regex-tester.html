@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Tester Online - Free Regular Expression Tester & Debugger | ToolboxKit</title>
+    <meta name="description" content="Free online regex tester. Test regular expressions with real-time matching, capture groups, and match highlighting. Supports JavaScript regex syntax. No signup required.">
+    <meta name="keywords" content="regex tester, regular expression tester, regex online, regex debugger, regex checker, test regex, regex match, regex validator">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://toolboxkit.netlify.app/regex-tester.html">
+    <meta property="og:title" content="Regex Tester Online - Free Regular Expression Tester & Debugger">
+    <meta property="og:description" content="Test regular expressions with real-time matching and capture groups. Free online regex tester.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolboxkit.netlify.app/regex-tester.html">
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2850355877461307" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Regex Tester Online",
+        "url": "https://toolboxkit.netlify.app/regex-tester.html",
+        "description": "Test regular expressions with real-time matching, capture groups, and match highlighting.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is a regular expression (regex)?",
+                "acceptedAnswer": { "@type": "Answer", "text": "A regular expression is a pattern that describes a set of strings. It is used for pattern matching, text searching, and text manipulation. For example, the regex \\d+ matches one or more digits." }
+            },
+            {
+                "@type": "Question",
+                "name": "What regex flags are supported?",
+                "acceptedAnswer": { "@type": "Answer", "text": "This tool supports JavaScript regex flags: g (global - find all matches), i (case-insensitive), m (multiline), s (dotAll - dot matches newlines), u (unicode), and y (sticky)." }
+            },
+            {
+                "@type": "Question",
+                "name": "What are capture groups?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Capture groups are portions of a regex enclosed in parentheses (). They capture the matched text so you can reference it later. For example, (\\d{3})-(\\d{4}) has two capture groups that match phone number parts." }
+            },
+            {
+                "@type": "Question",
+                "name": "Why does my regex show no matches?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Check that your pattern is correct, the flags are set properly (you may need the 'g' flag for multiple matches or 'i' for case-insensitive), and the test string actually contains text that matches your pattern." }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo">🧰 ToolboxKit</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#dev-tools">Developer Tools</a>
+            <a href="/#convert-tools">Converters</a>
+            <a href="/#gen-tools">Generators</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="padding-bottom:1rem">
+        <h1>Regex Tester Online</h1>
+        <p>Test your regular expressions in real time. See matches, capture groups, and match indices as you type. Supports JavaScript regex syntax.</p>
+    </header>
+
+    <!-- Ad: Top -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <main class="tools-container">
+        <div class="tool-area">
+            <div class="row">
+                <div style="flex:3"><label>Pattern:</label><input type="text" id="rx-pattern" placeholder="Enter regex pattern..."></div>
+                <div style="flex:1"><label>Flags:</label><input type="text" id="rx-flags" value="g" placeholder="gi"></div>
+            </div>
+            <label>Test String:</label>
+            <textarea id="rx-input" rows="5" placeholder="Enter test string..."></textarea>
+            <div id="rx-matches" style="margin-top:1rem"></div>
+        </div>
+    </main>
+
+    <!-- Ad: Middle -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <section class="tools-container">
+        <h2>Related Tools</h2>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h3>JSON Formatter</h3>
+                <p>Format, validate, and minify JSON data.</p>
+                <a href="json-formatter.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>Base64 Encoder/Decoder</h3>
+                <p>Encode or decode Base64 strings instantly.</p>
+                <a href="base64.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>Hash Generator</h3>
+                <p>Generate MD5, SHA-256, SHA-512 hashes from text.</p>
+                <a href="hash-generator.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="tools-container">
+        <h2>Frequently Asked Questions</h2>
+        <div style="max-width:800px">
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What is a regular expression (regex)?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">A regular expression is a pattern that describes a set of strings. It is used for pattern matching, text searching, and text manipulation. For example, the regex \d+ matches one or more digits.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What regex flags are supported?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">This tool supports JavaScript regex flags: g (global - find all matches), i (case-insensitive), m (multiline), s (dotAll - dot matches newlines), u (unicode), and y (sticky).</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What are capture groups?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Capture groups are portions of a regex enclosed in parentheses (). They capture the matched text so you can reference it later. For example, (\d{3})-(\d{4}) has two capture groups that match phone number parts.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">Why does my regex show no matches?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Check that your pattern is correct, the flags are set properly (you may need the 'g' flag for multiple matches or 'i' for case-insensitive), and the test string actually contains text that matches your pattern.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Ad: Bottom -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <footer>
+        <p>ToolboxKit — Free online tools. All processing happens in your browser. No data is sent to any server.</p>
+        <p><a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a></p>
+    </footer>
+
+    <script>
+    function escHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+    function copyText(id) {
+        const text = document.getElementById(id).textContent;
+        navigator.clipboard.writeText(text).then(() => {
+            const btn = event.target;
+            const orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = orig, 1500);
+        });
+    }
+
+    const update = () => {
+        const pattern = document.getElementById('rx-pattern').value;
+        const flags = document.getElementById('rx-flags').value;
+        const text = document.getElementById('rx-input').value;
+        const el = document.getElementById('rx-matches');
+        if (!pattern) { el.innerHTML = ''; return; }
+        try {
+            const regex = new RegExp(pattern, flags);
+            const matches = [...text.matchAll(regex)];
+            if (matches.length === 0) {
+                el.innerHTML = '<span style="color:var(--warning)">No matches found</span>';
+            } else {
+                let html = `<span style="color:var(--success)">${matches.length} match(es) found:</span><br><br>`;
+                matches.forEach((m, i) => {
+                    html += `<div style="margin-bottom:0.5rem"><strong>Match ${i+1}:</strong> <code>${escHtml(m[0])}</code> at index ${m.index}`;
+                    if (m.length > 1) {
+                        html += '<br>Groups: ';
+                        for (let g = 1; g < m.length; g++) html += `<code>${escHtml(m[g] || '')}</code> `;
+                    }
+                    html += '</div>';
+                });
+                el.innerHTML = html;
+            }
+        } catch(e) {
+            el.innerHTML = `<span style="color:var(--danger)">Error: ${escHtml(e.message)}</span>`;
+        }
+    };
+    document.getElementById('rx-pattern').addEventListener('input', update);
+    document.getElementById('rx-flags').addEventListener('input', update);
+    document.getElementById('rx-input').addEventListener('input', update);
+    </script>
+</body>
+</html>

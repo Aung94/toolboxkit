@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter Online - Free Character, Sentence & Paragraph Counter | ToolboxKit</title>
+    <meta name="description" content="Free online word counter tool. Count words, characters, sentences, paragraphs, and reading time instantly. Perfect for essays, articles, and social media posts.">
+    <meta name="keywords" content="word counter, character counter, word count online, letter counter, sentence counter, paragraph counter, reading time calculator">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://toolboxkit.netlify.app/word-counter.html">
+    <meta property="og:title" content="Word Counter Online - Free Character & Sentence Counter">
+    <meta property="og:description" content="Count words, characters, sentences, paragraphs, and reading time instantly. Free online tool.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolboxkit.netlify.app/word-counter.html">
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2850355877461307" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Word Counter Online",
+        "url": "https://toolboxkit.netlify.app/word-counter.html",
+        "description": "Count words, characters, sentences, paragraphs, and estimate reading time instantly.",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How does the word counter work?",
+                "acceptedAnswer": { "@type": "Answer", "text": "The word counter splits your text by whitespace to count words, counts all characters including spaces, detects sentences by punctuation marks (.!?), identifies paragraphs by blank lines, and estimates reading time at 200 words per minute." }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the average reading speed?",
+                "acceptedAnswer": { "@type": "Answer", "text": "The average adult reading speed is about 200-250 words per minute. This tool uses 200 WPM for a conservative estimate of reading time." }
+            },
+            {
+                "@type": "Question",
+                "name": "Does this tool count characters with and without spaces?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. The tool shows both total characters (including spaces) and characters without spaces, which is useful for platforms that have character limits." }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo">🧰 ToolboxKit</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#text-tools">Text Tools</a>
+            <a href="/#dev-tools">Developer Tools</a>
+            <a href="/#gen-tools">Generators</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="padding-bottom:1rem">
+        <h1>Word Counter Online</h1>
+        <p>Count words, characters, sentences, paragraphs, and estimate reading time. Just type or paste your text below.</p>
+    </header>
+
+    <!-- Ad: Top -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <main class="tools-container">
+        <div class="tool-area">
+            <label>Paste or type your text:</label>
+            <textarea id="wc-input" rows="8" placeholder="Start typing or paste text here..."></textarea>
+            <div class="stats">
+                <div class="stat"><span class="num" id="wc-words">0</span><span class="label">Words</span></div>
+                <div class="stat"><span class="num" id="wc-chars">0</span><span class="label">Characters</span></div>
+                <div class="stat"><span class="num" id="wc-chars-ns">0</span><span class="label">No Spaces</span></div>
+                <div class="stat"><span class="num" id="wc-sentences">0</span><span class="label">Sentences</span></div>
+                <div class="stat"><span class="num" id="wc-paragraphs">0</span><span class="label">Paragraphs</span></div>
+                <div class="stat"><span class="num" id="wc-reading">0</span><span class="label">Min Read</span></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Ad: Middle -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <section class="tools-container">
+        <h2>Related Tools</h2>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h3>Case Converter</h3>
+                <p>Convert text between UPPER, lower, Title, camelCase, snake_case.</p>
+                <a href="case-converter.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>JSON Formatter</h3>
+                <p>Format, validate, and minify JSON data.</p>
+                <a href="json-formatter.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>URL Encoder/Decoder</h3>
+                <p>Encode or decode URL components.</p>
+                <a href="url-encoder.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="tools-container">
+        <h2>Frequently Asked Questions</h2>
+        <div style="max-width:800px">
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">How does the word counter work?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">The word counter splits your text by whitespace to count words, counts all characters including spaces, detects sentences by punctuation marks (.!?), identifies paragraphs by blank lines, and estimates reading time at 200 words per minute.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What is the average reading speed?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">The average adult reading speed is about 200-250 words per minute. This tool uses 200 WPM for a conservative estimate of reading time.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">Does this tool count characters with and without spaces?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Yes. The tool shows both total characters (including spaces) and characters without spaces, which is useful for platforms that have character limits.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Ad: Bottom -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <footer>
+        <p>ToolboxKit — Free online tools. All processing happens in your browser. No data is sent to any server.</p>
+        <p><a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a></p>
+    </footer>
+
+    <script>
+    function escHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+    function copyText(id) {
+        const text = document.getElementById(id).textContent;
+        navigator.clipboard.writeText(text).then(() => {
+            const btn = event.target;
+            const orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = orig, 1500);
+        });
+    }
+
+    const input = document.getElementById('wc-input');
+    const update = () => {
+        const text = input.value;
+        const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+        document.getElementById('wc-words').textContent = words;
+        document.getElementById('wc-chars').textContent = text.length;
+        document.getElementById('wc-chars-ns').textContent = text.replace(/\s/g, '').length;
+        document.getElementById('wc-sentences').textContent = text.trim() ? (text.match(/[.!?]+/g) || []).length : 0;
+        document.getElementById('wc-paragraphs').textContent = text.trim() ? text.split(/\n\s*\n/).filter(p => p.trim()).length : 0;
+        document.getElementById('wc-reading').textContent = Math.ceil(words / 200);
+    };
+    input.addEventListener('input', update);
+    </script>
+</body>
+</html>

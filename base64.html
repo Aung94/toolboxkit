@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64 Encode Decode Online - Free Base64 Converter | ToolboxKit</title>
+    <meta name="description" content="Free online Base64 encoder and decoder. Convert text to Base64 or decode Base64 strings instantly. Supports UTF-8. No signup required.">
+    <meta name="keywords" content="base64 encode, base64 decode, base64 converter, base64 online, encode base64, decode base64, base64 to text, text to base64">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://toolboxkit.netlify.app/base64.html">
+    <meta property="og:title" content="Base64 Encode Decode Online - Free Base64 Converter">
+    <meta property="og:description" content="Encode or decode Base64 strings instantly. Free online tool that supports UTF-8 text.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolboxkit.netlify.app/base64.html">
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2850355877461307" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Base64 Encode Decode Online",
+        "url": "https://toolboxkit.netlify.app/base64.html",
+        "description": "Free online Base64 encoder and decoder. Convert text to Base64 or decode Base64 strings instantly.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is Base64 encoding?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Base64 is a binary-to-text encoding scheme that represents binary data as a string of ASCII characters. It is commonly used to embed binary data in text-based formats like JSON, XML, HTML, and email." }
+            },
+            {
+                "@type": "Question",
+                "name": "When should I use Base64 encoding?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Base64 is commonly used for embedding images in CSS or HTML, sending binary data in JSON APIs, encoding email attachments (MIME), and storing binary data in text-based databases or configuration files." }
+            },
+            {
+                "@type": "Question",
+                "name": "Does Base64 encoding increase file size?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Base64 encoding increases the data size by approximately 33%, because every 3 bytes of binary data are represented as 4 ASCII characters." }
+            },
+            {
+                "@type": "Question",
+                "name": "Is Base64 encryption?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Base64 is an encoding scheme, not encryption. It does not provide any security. Anyone can decode a Base64 string back to its original content. Do not use Base64 to protect sensitive data." }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo">🧰 ToolboxKit</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#convert-tools">Converters</a>
+            <a href="/#dev-tools">Developer Tools</a>
+            <a href="/#gen-tools">Generators</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="padding-bottom:1rem">
+        <h1>Base64 Encode Decode Online</h1>
+        <p>Encode text to Base64 or decode Base64 strings back to plain text. Supports UTF-8 characters. Fast and private.</p>
+    </header>
+
+    <!-- Ad: Top -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <main class="tools-container">
+        <div class="tool-area">
+            <label>Input:</label>
+            <textarea id="b64-input" rows="5" placeholder="Enter text to encode or Base64 to decode..."></textarea>
+            <div class="btn-group">
+                <button class="btn" onclick="b64('encode')">Encode →</button>
+                <button class="btn" onclick="b64('decode')">← Decode</button>
+                <button class="copy-btn" onclick="copyText('b64-output')">Copy</button>
+            </div>
+            <label>Output:</label>
+            <div class="output-box" id="b64-output"></div>
+        </div>
+    </main>
+
+    <!-- Ad: Middle -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <section class="tools-container">
+        <h2>Related Tools</h2>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h3>URL Encoder/Decoder</h3>
+                <p>Encode or decode URL components.</p>
+                <a href="url-encoder.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>Hash Generator</h3>
+                <p>Generate MD5, SHA-256, SHA-512 hashes from text.</p>
+                <a href="hash-generator.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>JSON Formatter</h3>
+                <p>Format, validate, and minify JSON data.</p>
+                <a href="json-formatter.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="tools-container">
+        <h2>Frequently Asked Questions</h2>
+        <div style="max-width:800px">
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What is Base64 encoding?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Base64 is a binary-to-text encoding scheme that represents binary data as a string of ASCII characters. It is commonly used to embed binary data in text-based formats like JSON, XML, HTML, and email.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">When should I use Base64 encoding?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Base64 is commonly used for embedding images in CSS or HTML, sending binary data in JSON APIs, encoding email attachments (MIME), and storing binary data in text-based databases or configuration files.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">Does Base64 encoding increase file size?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Yes. Base64 encoding increases the data size by approximately 33%, because every 3 bytes of binary data are represented as 4 ASCII characters.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">Is Base64 encryption?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">No. Base64 is an encoding scheme, not encryption. It does not provide any security. Anyone can decode a Base64 string back to its original content. Do not use Base64 to protect sensitive data.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Ad: Bottom -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <footer>
+        <p>ToolboxKit — Free online tools. All processing happens in your browser. No data is sent to any server.</p>
+        <p><a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a></p>
+    </footer>
+
+    <script>
+    function escHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+    function copyText(id) {
+        const text = document.getElementById(id).textContent;
+        navigator.clipboard.writeText(text).then(() => {
+            const btn = event.target;
+            const orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = orig, 1500);
+        });
+    }
+
+    window.b64 = (mode) => {
+        const input = document.getElementById('b64-input').value;
+        try {
+            const result = mode === 'encode' ? btoa(unescape(encodeURIComponent(input))) : decodeURIComponent(escape(atob(input)));
+            document.getElementById('b64-output').textContent = result;
+        } catch(e) {
+            document.getElementById('b64-output').textContent = 'Error: Invalid input - ' + e.message;
+        }
+    };
+    </script>
+</body>
+</html>

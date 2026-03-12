@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Encoder Decoder Online - Free Percent Encoding Tool | ToolboxKit</title>
+    <meta name="description" content="Free online URL encoder and decoder. Encode special characters for URLs or decode percent-encoded strings. Supports encodeURI and encodeURIComponent. No signup required.">
+    <meta name="keywords" content="url encoder, url decoder, percent encoding, url encode online, url decode online, encodeURIComponent, encode url, decode url">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://toolboxkit.netlify.app/url-encoder.html">
+    <meta property="og:title" content="URL Encoder Decoder Online - Free Percent Encoding Tool">
+    <meta property="og:description" content="Encode or decode URL strings instantly. Supports encodeURI and encodeURIComponent. Free online tool.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolboxkit.netlify.app/url-encoder.html">
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2850355877461307" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "URL Encoder Decoder Online",
+        "url": "https://toolboxkit.netlify.app/url-encoder.html",
+        "description": "Encode or decode URL strings instantly. Supports encodeURI and encodeURIComponent.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is URL encoding?",
+                "acceptedAnswer": { "@type": "Answer", "text": "URL encoding (also called percent encoding) replaces special characters in a URL with a percent sign (%) followed by two hexadecimal digits. For example, a space becomes %20. This ensures URLs are valid and transmitted correctly." }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the difference between Encode and Encode Component?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Encode (encodeURI) encodes a full URI but preserves characters like :, /, ?, #, and &. Encode Component (encodeURIComponent) encodes everything except letters, digits, and - _ . ~, which is what you want for query parameter values." }
+            },
+            {
+                "@type": "Question",
+                "name": "When should I URL encode?",
+                "acceptedAnswer": { "@type": "Answer", "text": "URL encode whenever you pass user input or special characters in URLs, query strings, or form data. This prevents broken URLs and potential security issues like injection attacks." }
+            },
+            {
+                "@type": "Question",
+                "name": "Why do spaces become %20 or + in URLs?",
+                "acceptedAnswer": { "@type": "Answer", "text": "In URL encoding, spaces are represented as %20. In form data (application/x-www-form-urlencoded), spaces become +. Both are valid representations of a space in different contexts." }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo">🧰 ToolboxKit</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#convert-tools">Converters</a>
+            <a href="/#dev-tools">Developer Tools</a>
+            <a href="/#gen-tools">Generators</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="padding-bottom:1rem">
+        <h1>URL Encoder Decoder Online</h1>
+        <p>Encode special characters for URLs or decode percent-encoded strings. Supports both encodeURI and encodeURIComponent modes.</p>
+    </header>
+
+    <!-- Ad: Top -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <main class="tools-container">
+        <div class="tool-area">
+            <label>Input:</label>
+            <textarea id="url-input" rows="4" placeholder="Enter text or URL-encoded string..."></textarea>
+            <div class="btn-group">
+                <button class="btn" onclick="urlConvert('encode')">Encode →</button>
+                <button class="btn" onclick="urlConvert('decode')">← Decode</button>
+                <button class="btn" onclick="urlConvert('encodeComponent')">Encode Component</button>
+                <button class="copy-btn" onclick="copyText('url-output')">Copy</button>
+            </div>
+            <label>Output:</label>
+            <div class="output-box" id="url-output"></div>
+        </div>
+    </main>
+
+    <!-- Ad: Middle -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <section class="tools-container">
+        <h2>Related Tools</h2>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h3>Base64 Encoder/Decoder</h3>
+                <p>Encode or decode Base64 strings instantly.</p>
+                <a href="base64.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>JSON Formatter</h3>
+                <p>Format, validate, and minify JSON data.</p>
+                <a href="json-formatter.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>QR Code Generator</h3>
+                <p>Generate QR codes from any text or URL.</p>
+                <a href="qr-code-generator.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="tools-container">
+        <h2>Frequently Asked Questions</h2>
+        <div style="max-width:800px">
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What is URL encoding?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">URL encoding (also called percent encoding) replaces special characters in a URL with a percent sign (%) followed by two hexadecimal digits. For example, a space becomes %20. This ensures URLs are valid and transmitted correctly.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What is the difference between Encode and Encode Component?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Encode (encodeURI) encodes a full URI but preserves characters like :, /, ?, #, and &. Encode Component (encodeURIComponent) encodes everything except letters, digits, and - _ . ~, which is what you want for query parameter values.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">When should I URL encode?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">URL encode whenever you pass user input or special characters in URLs, query strings, or form data. This prevents broken URLs and potential security issues like injection attacks.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">Why do spaces become %20 or + in URLs?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">In URL encoding, spaces are represented as %20. In form data (application/x-www-form-urlencoded), spaces become +. Both are valid representations of a space in different contexts.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Ad: Bottom -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <footer>
+        <p>ToolboxKit — Free online tools. All processing happens in your browser. No data is sent to any server.</p>
+        <p><a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a></p>
+    </footer>
+
+    <script>
+    function escHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+    function copyText(id) {
+        const text = document.getElementById(id).textContent;
+        navigator.clipboard.writeText(text).then(() => {
+            const btn = event.target;
+            const orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = orig, 1500);
+        });
+    }
+
+    window.urlConvert = (mode) => {
+        const input = document.getElementById('url-input').value;
+        try {
+            let result;
+            if (mode === 'encode') result = encodeURI(input);
+            else if (mode === 'decode') result = decodeURIComponent(input);
+            else result = encodeURIComponent(input);
+            document.getElementById('url-output').textContent = result;
+        } catch(e) {
+            document.getElementById('url-output').textContent = 'Error: ' + e.message;
+        }
+    };
+    </script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UUID Generator Online - Free Random UUID/GUID Creator | ToolboxKit</title>
+    <meta name="description" content="Generate random UUIDs (v4) and GUIDs online instantly. Multiple formats: standard, no dashes, uppercase, braces. Generate up to 100 UUIDs at once. Free, no signup.">
+    <meta name="keywords" content="uuid generator, guid generator, random uuid, uuid v4, generate uuid online, uuid creator, unique id generator">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://toolboxkit.netlify.app/uuid-generator.html">
+    <meta property="og:title" content="UUID Generator Online - Free Random UUID/GUID Creator">
+    <meta property="og:description" content="Generate random UUIDs and GUIDs online instantly. Multiple formats available. Free online tool.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolboxkit.netlify.app/uuid-generator.html">
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2850355877461307" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "UUID Generator Online",
+        "url": "https://toolboxkit.netlify.app/uuid-generator.html",
+        "description": "Generate random UUIDs (v4) and GUIDs online instantly. Multiple formats available.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is a UUID?",
+                "acceptedAnswer": { "@type": "Answer", "text": "A UUID (Universally Unique Identifier) is a 128-bit number used to uniquely identify information in computer systems. Version 4 UUIDs are randomly generated and have the format xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx." }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the difference between UUID and GUID?",
+                "acceptedAnswer": { "@type": "Answer", "text": "UUID and GUID (Globally Unique Identifier) are essentially the same thing. GUID is the term used by Microsoft, while UUID is the standard term used in most other contexts. Both follow the same specification (RFC 4122)." }
+            },
+            {
+                "@type": "Question",
+                "name": "Can two UUIDs ever be the same?",
+                "acceptedAnswer": { "@type": "Answer", "text": "While theoretically possible, the probability of generating two identical UUIDs is astronomically low. A v4 UUID has 122 random bits, meaning you would need to generate about 2.71 quintillion UUIDs to have a 50% chance of a collision." }
+            },
+            {
+                "@type": "Question",
+                "name": "Are these UUIDs cryptographically secure?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. This tool uses the browser's built-in crypto.randomUUID() method, which generates cryptographically secure random UUIDs." }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo">🧰 ToolboxKit</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#gen-tools">Generators</a>
+            <a href="/#dev-tools">Developer Tools</a>
+            <a href="/#convert-tools">Converters</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="padding-bottom:1rem">
+        <h1>UUID Generator Online</h1>
+        <p>Generate random UUIDs (v4) and GUIDs instantly. Choose from multiple formats and generate up to 100 at once.</p>
+    </header>
+
+    <!-- Ad: Top -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <main class="tools-container">
+        <div class="tool-area">
+            <div class="row">
+                <div>
+                    <label>Count:</label>
+                    <input type="text" id="uuid-count" value="5">
+                </div>
+                <div>
+                    <label>Format:</label>
+                    <select id="uuid-format">
+                        <option value="default">Standard (with dashes)</option>
+                        <option value="nodash">No dashes</option>
+                        <option value="upper">UPPERCASE</option>
+                        <option value="braces">{Braces}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="btn-group">
+                <button class="btn" onclick="genUUIDs()">Generate</button>
+                <button class="copy-btn" onclick="copyText('uuid-output')">Copy All</button>
+            </div>
+            <div class="output-box" id="uuid-output" style="min-height:120px"></div>
+        </div>
+    </main>
+
+    <!-- Ad: Middle -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <section class="tools-container">
+        <h2>Related Tools</h2>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h3>Password Generator</h3>
+                <p>Generate strong, secure passwords with custom rules.</p>
+                <a href="password-generator.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>Hash Generator</h3>
+                <p>Generate MD5, SHA-256, SHA-512 hashes from text.</p>
+                <a href="hash-generator.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>QR Code Generator</h3>
+                <p>Generate QR codes from any text or URL.</p>
+                <a href="qr-code-generator.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="tools-container">
+        <h2>Frequently Asked Questions</h2>
+        <div style="max-width:800px">
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What is a UUID?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">A UUID (Universally Unique Identifier) is a 128-bit number used to uniquely identify information in computer systems. Version 4 UUIDs are randomly generated and have the format xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What is the difference between UUID and GUID?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">UUID and GUID (Globally Unique Identifier) are essentially the same thing. GUID is the term used by Microsoft, while UUID is the standard term used in most other contexts. Both follow the same specification (RFC 4122).</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">Can two UUIDs ever be the same?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">While theoretically possible, the probability of generating two identical UUIDs is astronomically low. A v4 UUID has 122 random bits, meaning you would need to generate about 2.71 quintillion UUIDs to have a 50% chance of a collision.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">Are these UUIDs cryptographically secure?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Yes. This tool uses the browser's built-in crypto.randomUUID() method, which generates cryptographically secure random UUIDs.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Ad: Bottom -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <footer>
+        <p>ToolboxKit — Free online tools. All processing happens in your browser. No data is sent to any server.</p>
+        <p><a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a></p>
+    </footer>
+
+    <script>
+    function escHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+    function copyText(id) {
+        const text = document.getElementById(id).textContent;
+        navigator.clipboard.writeText(text).then(() => {
+            const btn = event.target;
+            const orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = orig, 1500);
+        });
+    }
+
+    window.genUUIDs = () => {
+        const count = Math.min(parseInt(document.getElementById('uuid-count').value) || 5, 100);
+        const format = document.getElementById('uuid-format').value;
+        let results = [];
+        for (let i = 0; i < count; i++) {
+            let uuid = crypto.randomUUID();
+            if (format === 'nodash') uuid = uuid.replace(/-/g, '');
+            else if (format === 'upper') uuid = uuid.toUpperCase();
+            else if (format === 'braces') uuid = '{' + uuid + '}';
+            results.push(uuid);
+        }
+        document.getElementById('uuid-output').textContent = results.join('\n');
+    };
+    window.genUUIDs();
+    </script>
+</body>
+</html>

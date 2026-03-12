@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHA256 Hash Generator Online - Free MD5, SHA-1, SHA-512 Hasher | ToolboxKit</title>
+    <meta name="description" content="Free online hash generator. Generate SHA-256, SHA-1, SHA-384, and SHA-512 hashes from any text instantly. Secure hashing in your browser. No data sent to servers.">
+    <meta name="keywords" content="sha256 hash generator, md5 hash, sha512 hash, hash generator online, sha-256, sha-1, hash calculator, text to hash">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://toolboxkit.netlify.app/hash-generator.html">
+    <meta property="og:title" content="SHA256 Hash Generator Online - Free MD5, SHA-1, SHA-512 Hasher">
+    <meta property="og:description" content="Generate SHA-256, SHA-1, SHA-384, and SHA-512 hashes from any text instantly. Free online hash generator.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolboxkit.netlify.app/hash-generator.html">
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2850355877461307" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "SHA256 Hash Generator Online",
+        "url": "https://toolboxkit.netlify.app/hash-generator.html",
+        "description": "Generate SHA-256, SHA-1, SHA-384, and SHA-512 hashes from any text instantly.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is a hash function?",
+                "acceptedAnswer": { "@type": "Answer", "text": "A hash function takes an input of any size and produces a fixed-size output (the hash). The same input always produces the same hash, but even a tiny change in input produces a completely different hash. Hash functions are one-way — you cannot reverse a hash to get the original input." }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the difference between SHA-256 and SHA-512?",
+                "acceptedAnswer": { "@type": "Answer", "text": "SHA-256 produces a 256-bit (64 character hex) hash, while SHA-512 produces a 512-bit (128 character hex) hash. SHA-512 provides more security but is longer. Both are part of the SHA-2 family and are widely used in security applications." }
+            },
+            {
+                "@type": "Question",
+                "name": "Is SHA-1 still safe to use?",
+                "acceptedAnswer": { "@type": "Answer", "text": "SHA-1 is considered cryptographically broken and should not be used for security purposes. Collisions have been demonstrated. Use SHA-256 or SHA-512 for security-sensitive applications." }
+            },
+            {
+                "@type": "Question",
+                "name": "What are common uses for hash generators?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Hash generators are used for verifying file integrity, password storage, digital signatures, data deduplication, and checksums. Developers commonly use them to verify downloads and check data integrity." }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo">🧰 ToolboxKit</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#gen-tools">Generators</a>
+            <a href="/#dev-tools">Developer Tools</a>
+            <a href="/#convert-tools">Converters</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="padding-bottom:1rem">
+        <h1>SHA256 Hash Generator Online</h1>
+        <p>Generate SHA-1, SHA-256, SHA-384, and SHA-512 hashes from any text. All hashing is done in your browser using the Web Crypto API.</p>
+    </header>
+
+    <!-- Ad: Top -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <main class="tools-container">
+        <div class="tool-area">
+            <label>Input text:</label>
+            <textarea id="hash-input" rows="4" placeholder="Enter text to hash..."></textarea>
+            <button class="btn" onclick="genHashes()" style="margin:1rem 0">Generate Hashes</button>
+            <div id="hash-results"></div>
+        </div>
+    </main>
+
+    <!-- Ad: Middle -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <section class="tools-container">
+        <h2>Related Tools</h2>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h3>Password Generator</h3>
+                <p>Generate strong, secure passwords with custom rules.</p>
+                <a href="password-generator.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>Base64 Encoder/Decoder</h3>
+                <p>Encode or decode Base64 strings instantly.</p>
+                <a href="base64.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>UUID Generator</h3>
+                <p>Generate random UUIDs/GUIDs instantly.</p>
+                <a href="uuid-generator.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="tools-container">
+        <h2>Frequently Asked Questions</h2>
+        <div style="max-width:800px">
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What is a hash function?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">A hash function takes an input of any size and produces a fixed-size output (the hash). The same input always produces the same hash, but even a tiny change in input produces a completely different hash. Hash functions are one-way — you cannot reverse a hash to get the original input.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What is the difference between SHA-256 and SHA-512?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">SHA-256 produces a 256-bit (64 character hex) hash, while SHA-512 produces a 512-bit (128 character hex) hash. SHA-512 provides more security but is longer. Both are part of the SHA-2 family and are widely used in security applications.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">Is SHA-1 still safe to use?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">SHA-1 is considered cryptographically broken and should not be used for security purposes. Collisions have been demonstrated. Use SHA-256 or SHA-512 for security-sensitive applications.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What are common uses for hash generators?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Hash generators are used for verifying file integrity, password storage, digital signatures, data deduplication, and checksums. Developers commonly use them to verify downloads and check data integrity.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Ad: Bottom -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <footer>
+        <p>ToolboxKit — Free online tools. All processing happens in your browser. No data is sent to any server.</p>
+        <p><a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a></p>
+    </footer>
+
+    <script>
+    function escHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+    function copyText(id) {
+        const text = document.getElementById(id).textContent;
+        navigator.clipboard.writeText(text).then(() => {
+            const btn = event.target;
+            const orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = orig, 1500);
+        });
+    }
+
+    window.genHashes = async () => {
+        const text = document.getElementById('hash-input').value;
+        const encoder = new TextEncoder();
+        const data = encoder.encode(text);
+        const algos = ['SHA-1', 'SHA-256', 'SHA-384', 'SHA-512'];
+        let html = '';
+        for (const algo of algos) {
+            const hash = await crypto.subtle.digest(algo, data);
+            const hex = [...new Uint8Array(hash)].map(b => b.toString(16).padStart(2, '0')).join('');
+            html += `<div style="margin-bottom:0.75rem">
+                <strong>${algo}:</strong> <button class="copy-btn" onclick="navigator.clipboard.writeText('${hex}').then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy',1500)})">Copy</button>
+                <div class="output-box" style="margin-top:0.25rem;font-size:0.8rem">${hex}</div>
+            </div>`;
+        }
+        document.getElementById('hash-results').innerHTML = html;
+    };
+    </script>
+</body>
+</html>

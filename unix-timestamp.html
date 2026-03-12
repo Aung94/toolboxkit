@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unix Timestamp Converter - Free Epoch Time Converter Online | ToolboxKit</title>
+    <meta name="description" content="Free online Unix timestamp converter. Convert Unix timestamps to human-readable dates and dates to timestamps. Shows current epoch time live. No signup required.">
+    <meta name="keywords" content="unix timestamp converter, epoch converter, unix time, timestamp to date, date to timestamp, epoch time, unix epoch converter">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://toolboxkit.netlify.app/unix-timestamp.html">
+    <meta property="og:title" content="Unix Timestamp Converter - Free Epoch Time Converter Online">
+    <meta property="og:description" content="Convert Unix timestamps to human-readable dates and vice versa. Shows current epoch time live.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolboxkit.netlify.app/unix-timestamp.html">
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2850355877461307" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Unix Timestamp Converter",
+        "url": "https://toolboxkit.netlify.app/unix-timestamp.html",
+        "description": "Convert Unix timestamps to human-readable dates and dates to timestamps. Shows current epoch time live.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is a Unix timestamp?",
+                "acceptedAnswer": { "@type": "Answer", "text": "A Unix timestamp (also called epoch time or POSIX time) is the number of seconds that have elapsed since January 1, 1970 00:00:00 UTC. It is a widely used standard for tracking time in computing." }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the Unix epoch?",
+                "acceptedAnswer": { "@type": "Answer", "text": "The Unix epoch is January 1, 1970 00:00:00 UTC. This is the reference point from which Unix timestamps are measured. A timestamp of 0 corresponds to this exact date and time." }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the difference between seconds and milliseconds timestamps?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Unix timestamps are traditionally in seconds (10 digits, e.g., 1700000000). JavaScript and some APIs use milliseconds (13 digits, e.g., 1700000000000). This tool works with seconds but also shows the millisecond value." }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the Year 2038 problem?",
+                "acceptedAnswer": { "@type": "Answer", "text": "The Year 2038 problem is when 32-bit Unix timestamps will overflow on January 19, 2038. Modern systems use 64-bit timestamps which will not overflow for billions of years." }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo">🧰 ToolboxKit</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#convert-tools">Converters</a>
+            <a href="/#dev-tools">Developer Tools</a>
+            <a href="/#gen-tools">Generators</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="padding-bottom:1rem">
+        <h1>Unix Timestamp Converter</h1>
+        <p>Convert between Unix timestamps and human-readable dates. See the current epoch time updating live.</p>
+    </header>
+
+    <!-- Ad: Top -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <main class="tools-container">
+        <div class="tool-area">
+            <div class="stats">
+                <div class="stat"><span class="num" id="ut-now" style="font-size:1.2rem">-</span><span class="label">Current Timestamp</span></div>
+            </div>
+            <div class="row">
+                <div>
+                    <label>Unix Timestamp:</label>
+                    <input type="text" id="ut-ts" placeholder="1700000000">
+                </div>
+                <div>
+                    <label>Human Date:</label>
+                    <input type="text" id="ut-date" placeholder="2024-01-01 00:00:00">
+                </div>
+            </div>
+            <div class="btn-group">
+                <button class="btn" onclick="tsToDate()">Timestamp → Date</button>
+                <button class="btn" onclick="dateToTs()">Date → Timestamp</button>
+                <button class="btn btn-secondary" onclick="setNow()">Use Current Time</button>
+            </div>
+            <div class="output-box" id="ut-output"></div>
+        </div>
+    </main>
+
+    <!-- Ad: Middle -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <section class="tools-container">
+        <h2>Related Tools</h2>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h3>JSON Formatter</h3>
+                <p>Format, validate, and minify JSON data.</p>
+                <a href="json-formatter.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>Base64 Encoder/Decoder</h3>
+                <p>Encode or decode Base64 strings instantly.</p>
+                <a href="base64.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>Color Converter</h3>
+                <p>Convert between HEX, RGB, HSL color formats.</p>
+                <a href="color-converter.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="tools-container">
+        <h2>Frequently Asked Questions</h2>
+        <div style="max-width:800px">
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What is a Unix timestamp?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">A Unix timestamp (also called epoch time or POSIX time) is the number of seconds that have elapsed since January 1, 1970 00:00:00 UTC. It is a widely used standard for tracking time in computing.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What is the Unix epoch?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">The Unix epoch is January 1, 1970 00:00:00 UTC. This is the reference point from which Unix timestamps are measured. A timestamp of 0 corresponds to this exact date and time.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What is the difference between seconds and milliseconds timestamps?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Unix timestamps are traditionally in seconds (10 digits, e.g., 1700000000). JavaScript and some APIs use milliseconds (13 digits, e.g., 1700000000000). This tool works with seconds but also shows the millisecond value.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What is the Year 2038 problem?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">The Year 2038 problem is when 32-bit Unix timestamps will overflow on January 19, 2038. Modern systems use 64-bit timestamps which will not overflow for billions of years.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Ad: Bottom -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <footer>
+        <p>ToolboxKit — Free online tools. All processing happens in your browser. No data is sent to any server.</p>
+        <p><a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a></p>
+    </footer>
+
+    <script>
+    function escHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+    function copyText(id) {
+        const text = document.getElementById(id).textContent;
+        navigator.clipboard.writeText(text).then(() => {
+            const btn = event.target;
+            const orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = orig, 1500);
+        });
+    }
+
+    const updateNow = () => { document.getElementById('ut-now').textContent = Math.floor(Date.now()/1000); };
+    updateNow(); setInterval(updateNow, 1000);
+
+    window.setNow = () => { document.getElementById('ut-ts').value = Math.floor(Date.now()/1000); window.tsToDate(); };
+    window.tsToDate = () => {
+        const ts = parseInt(document.getElementById('ut-ts').value);
+        if (isNaN(ts)) return;
+        const d = new Date(ts * 1000);
+        const out = document.getElementById('ut-output');
+        out.textContent = `UTC: ${d.toUTCString()}\nLocal: ${d.toLocaleString()}\nISO: ${d.toISOString()}`;
+        document.getElementById('ut-date').value = d.toISOString().replace('T', ' ').replace(/\.\d+Z/, '');
+    };
+    window.dateToTs = () => {
+        const d = new Date(document.getElementById('ut-date').value);
+        if (isNaN(d)) { document.getElementById('ut-output').textContent = 'Invalid date'; return; }
+        const ts = Math.floor(d.getTime()/1000);
+        document.getElementById('ut-ts').value = ts;
+        document.getElementById('ut-output').textContent = `Timestamp: ${ts}\nMilliseconds: ${d.getTime()}`;
+    };
+    </script>
+</body>
+</html>

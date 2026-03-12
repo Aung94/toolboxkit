@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Converter Online - Free Text Case Changer (Upper, Lower, Title) | ToolboxKit</title>
+    <meta name="description" content="Free online case converter. Convert text to UPPERCASE, lowercase, Title Case, Sentence case, camelCase, snake_case, kebab-case, and tOGGLE cASE instantly. No signup.">
+    <meta name="keywords" content="case converter, text case changer, uppercase converter, lowercase converter, title case, camelcase converter, snake case, kebab case, toggle case">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://toolboxkit.netlify.app/case-converter.html">
+    <meta property="og:title" content="Case Converter Online - Free Text Case Changer">
+    <meta property="og:description" content="Convert text to UPPERCASE, lowercase, Title Case, camelCase, snake_case, and more. Free online tool.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolboxkit.netlify.app/case-converter.html">
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2850355877461307" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Case Converter Online",
+        "url": "https://toolboxkit.netlify.app/case-converter.html",
+        "description": "Convert text between UPPERCASE, lowercase, Title Case, Sentence case, camelCase, snake_case, kebab-case, and tOGGLE cASE.",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What text cases are supported?",
+                "acceptedAnswer": { "@type": "Answer", "text": "This tool supports 8 text cases: UPPERCASE, lowercase, Title Case, Sentence case, camelCase, snake_case, kebab-case, and tOGGLE cASE (inverts the case of each character)." }
+            },
+            {
+                "@type": "Question",
+                "name": "What is camelCase?",
+                "acceptedAnswer": { "@type": "Answer", "text": "camelCase is a naming convention where the first word starts lowercase and each subsequent word starts uppercase, with no spaces or separators (e.g., myVariableName). It is commonly used in JavaScript and Java programming." }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the difference between snake_case and kebab-case?",
+                "acceptedAnswer": { "@type": "Answer", "text": "snake_case uses underscores to separate words (e.g., my_variable_name), common in Python and databases. kebab-case uses hyphens (e.g., my-variable-name), common in URLs, CSS class names, and file names." }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo">🧰 ToolboxKit</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#text-tools">Text Tools</a>
+            <a href="/#dev-tools">Developer Tools</a>
+            <a href="/#gen-tools">Generators</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="padding-bottom:1rem">
+        <h1>Case Converter Online</h1>
+        <p>Convert text between UPPERCASE, lowercase, Title Case, Sentence case, camelCase, snake_case, kebab-case, and more. Just paste and click.</p>
+    </header>
+
+    <!-- Ad: Top -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <main class="tools-container">
+        <div class="tool-area">
+            <label>Enter your text:</label>
+            <textarea id="cc-input" rows="5" placeholder="Enter text to convert..."></textarea>
+            <div class="btn-group">
+                <button class="btn" onclick="caseConvert('upper')">UPPERCASE</button>
+                <button class="btn" onclick="caseConvert('lower')">lowercase</button>
+                <button class="btn" onclick="caseConvert('title')">Title Case</button>
+                <button class="btn" onclick="caseConvert('sentence')">Sentence case</button>
+                <button class="btn" onclick="caseConvert('camel')">camelCase</button>
+                <button class="btn" onclick="caseConvert('snake')">snake_case</button>
+                <button class="btn" onclick="caseConvert('kebab')">kebab-case</button>
+                <button class="btn" onclick="caseConvert('toggle')">tOGGLE</button>
+            </div>
+            <label>Result: <button class="copy-btn" onclick="copyText('cc-output')">Copy</button></label>
+            <div class="output-box" id="cc-output"></div>
+        </div>
+    </main>
+
+    <!-- Ad: Middle -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <section class="tools-container">
+        <h2>Related Tools</h2>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h3>Word Counter</h3>
+                <p>Count words, characters, sentences, and paragraphs instantly.</p>
+                <a href="word-counter.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>JSON Formatter</h3>
+                <p>Format, validate, and minify JSON data.</p>
+                <a href="json-formatter.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>Regex Tester</h3>
+                <p>Test regular expressions with real-time matching.</p>
+                <a href="regex-tester.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="tools-container">
+        <h2>Frequently Asked Questions</h2>
+        <div style="max-width:800px">
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What text cases are supported?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">This tool supports 8 text cases: UPPERCASE, lowercase, Title Case, Sentence case, camelCase, snake_case, kebab-case, and tOGGLE cASE (inverts the case of each character).</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What is camelCase?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">camelCase is a naming convention where the first word starts lowercase and each subsequent word starts uppercase, with no spaces or separators (e.g., myVariableName). It is commonly used in JavaScript and Java programming.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What is the difference between snake_case and kebab-case?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">snake_case uses underscores to separate words (e.g., my_variable_name), common in Python and databases. kebab-case uses hyphens (e.g., my-variable-name), common in URLs, CSS class names, and file names.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Ad: Bottom -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <footer>
+        <p>ToolboxKit — Free online tools. All processing happens in your browser. No data is sent to any server.</p>
+        <p><a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a></p>
+    </footer>
+
+    <script>
+    function escHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+    function copyText(id) {
+        const text = document.getElementById(id).textContent;
+        navigator.clipboard.writeText(text).then(() => {
+            const btn = event.target;
+            const orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = orig, 1500);
+        });
+    }
+
+    window.caseConvert = (type) => {
+        const text = document.getElementById('cc-input').value;
+        const words = text.trim().split(/\s+/);
+        let result;
+        switch(type) {
+            case 'upper': result = text.toUpperCase(); break;
+            case 'lower': result = text.toLowerCase(); break;
+            case 'title': result = text.replace(/\w\S*/g, w => w[0].toUpperCase() + w.slice(1).toLowerCase()); break;
+            case 'sentence': result = text.toLowerCase().replace(/(^\s*|[.!?]\s+)(\w)/g, (m, p1, p2) => p1 + p2.toUpperCase()); break;
+            case 'camel': result = words.map((w, i) => i === 0 ? w.toLowerCase() : w[0].toUpperCase() + w.slice(1).toLowerCase()).join(''); break;
+            case 'snake': result = words.join('_').toLowerCase(); break;
+            case 'kebab': result = words.join('-').toLowerCase(); break;
+            case 'toggle': result = [...text].map(c => c === c.toUpperCase() ? c.toLowerCase() : c.toUpperCase()).join(''); break;
+        }
+        document.getElementById('cc-output').textContent = result;
+    };
+    </script>
+</body>
+</html>

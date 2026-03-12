@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Formatter Online - Free JSON Beautifier & Validator | ToolboxKit</title>
+    <meta name="description" content="Free online JSON formatter, beautifier, and validator. Paste your JSON to format, minify, or validate instantly. No signup required, runs in your browser.">
+    <meta name="keywords" content="json formatter, json beautifier, json validator, json minify, format json online, json pretty print, json lint, json checker">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://toolboxkit.netlify.app/json-formatter.html">
+    <meta property="og:title" content="JSON Formatter Online - Free JSON Beautifier & Validator">
+    <meta property="og:description" content="Format, beautify, minify, and validate JSON data instantly. Free online tool with syntax highlighting.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolboxkit.netlify.app/json-formatter.html">
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2850355877461307" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "JSON Formatter Online",
+        "url": "https://toolboxkit.netlify.app/json-formatter.html",
+        "description": "Free online JSON formatter, beautifier, and validator. Format, minify, or validate JSON data instantly.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is a JSON formatter?",
+                "acceptedAnswer": { "@type": "Answer", "text": "A JSON formatter is a tool that takes raw or minified JSON data and reformats it with proper indentation and line breaks, making it easy to read and debug. It can also validate whether your JSON is syntactically correct." }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I validate JSON online?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Paste your JSON into the input field and click 'Validate'. The tool will parse your JSON and tell you whether it is valid or show you the exact error message if it is not." }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the difference between JSON beautify and minify?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Beautify (or pretty-print) adds indentation and line breaks to make JSON human-readable. Minify removes all unnecessary whitespace to reduce file size, which is useful for production environments." }
+            },
+            {
+                "@type": "Question",
+                "name": "Is my data safe when using this JSON formatter?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. This tool runs entirely in your browser. No data is sent to any server. Your JSON never leaves your computer." }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo">🧰 ToolboxKit</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#dev-tools">Developer Tools</a>
+            <a href="/#convert-tools">Converters</a>
+            <a href="/#gen-tools">Generators</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="padding-bottom:1rem">
+        <h1>JSON Formatter Online</h1>
+        <p>Format, beautify, minify, and validate your JSON data instantly. Free, private, and runs entirely in your browser.</p>
+    </header>
+
+    <!-- Ad: Top -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <main class="tools-container">
+        <div class="tool-area">
+            <label>Paste JSON:</label>
+            <textarea id="jf-input" rows="10" placeholder='{"key": "value", "array": [1, 2, 3]}'></textarea>
+            <div class="btn-group">
+                <button class="btn" onclick="formatJSON('pretty')">Format / Beautify</button>
+                <button class="btn" onclick="formatJSON('minify')">Minify</button>
+                <button class="btn" onclick="formatJSON('validate')">Validate</button>
+                <button class="copy-btn" onclick="copyText('jf-output')">Copy Result</button>
+            </div>
+            <div id="jf-status" style="margin:0.5rem 0;font-size:0.9rem"></div>
+            <div class="output-box" id="jf-output" style="min-height:150px"></div>
+        </div>
+    </main>
+
+    <!-- Ad: Middle -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Related Tools -->
+    <section class="tools-container">
+        <h2>Related Tools</h2>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h3>Regex Tester</h3>
+                <p>Test regular expressions with real-time matching and groups.</p>
+                <a href="regex-tester.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>Base64 Encoder/Decoder</h3>
+                <p>Encode or decode Base64 strings instantly.</p>
+                <a href="base64.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>URL Encoder/Decoder</h3>
+                <p>Encode or decode URL components.</p>
+                <a href="url-encoder.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="tools-container">
+        <h2>Frequently Asked Questions</h2>
+        <div style="max-width:800px">
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What is a JSON formatter?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">A JSON formatter is a tool that takes raw or minified JSON data and reformats it with proper indentation and line breaks, making it easy to read and debug. It can also validate whether your JSON is syntactically correct.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">How do I validate JSON online?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Paste your JSON into the input field and click "Validate". The tool will parse your JSON and tell you whether it is valid or show you the exact error message if it is not.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What is the difference between JSON beautify and minify?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Beautify (or pretty-print) adds indentation and line breaks to make JSON human-readable. Minify removes all unnecessary whitespace to reduce file size, which is useful for production environments.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">Is my data safe when using this JSON formatter?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Yes. This tool runs entirely in your browser. No data is sent to any server. Your JSON never leaves your computer.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Ad: Bottom -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <footer>
+        <p>ToolboxKit — Free online tools. All processing happens in your browser. No data is sent to any server.</p>
+        <p><a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a></p>
+    </footer>
+
+    <script>
+    function escHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+    function copyText(id) {
+        const text = document.getElementById(id).textContent;
+        navigator.clipboard.writeText(text).then(() => {
+            const btn = event.target;
+            const orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = orig, 1500);
+        });
+    }
+
+    window.formatJSON = (mode) => {
+        const input = document.getElementById('jf-input').value;
+        const status = document.getElementById('jf-status');
+        const output = document.getElementById('jf-output');
+        try {
+            const parsed = JSON.parse(input);
+            status.innerHTML = '<span style="color:var(--success)">✓ Valid JSON</span>';
+            if (mode === 'pretty') output.textContent = JSON.stringify(parsed, null, 2);
+            else if (mode === 'minify') output.textContent = JSON.stringify(parsed);
+            else output.textContent = 'Valid JSON with ' + JSON.stringify(parsed, null, 2).split('\n').length + ' lines';
+        } catch(e) {
+            status.innerHTML = '<span style="color:var(--danger)">✗ Invalid JSON</span>';
+            output.textContent = 'Error: ' + e.message;
+        }
+    };
+    </script>
+</body>
+</html>

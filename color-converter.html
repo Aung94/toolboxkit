@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Converter HEX RGB HSL - Free Online Color Picker | ToolboxKit</title>
+    <meta name="description" content="Free online color converter. Convert between HEX, RGB, and HSL color formats with a live color picker. Get instant color values for your CSS and design projects.">
+    <meta name="keywords" content="color converter, hex to rgb, rgb to hex, hsl converter, color picker online, hex color code, rgb color converter, css colors">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://toolboxkit.netlify.app/color-converter.html">
+    <meta property="og:title" content="Color Converter HEX RGB HSL - Free Online Color Picker">
+    <meta property="og:description" content="Convert between HEX, RGB, and HSL color formats with a live color picker. Free online tool for designers and developers.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolboxkit.netlify.app/color-converter.html">
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2850355877461307" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Color Converter HEX RGB HSL",
+        "url": "https://toolboxkit.netlify.app/color-converter.html",
+        "description": "Convert between HEX, RGB, and HSL color formats with a live color picker.",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the difference between HEX, RGB, and HSL?",
+                "acceptedAnswer": { "@type": "Answer", "text": "HEX uses a 6-digit hexadecimal code (e.g., #6366f1). RGB specifies Red, Green, Blue values from 0-255 (e.g., rgb(99, 102, 241)). HSL uses Hue (0-360), Saturation (0-100%), and Lightness (0-100%) (e.g., hsl(239, 84%, 67%)). They all represent the same colors, just in different formats." }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I convert HEX to RGB?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Enter or pick a color using the color picker or type a HEX code. The tool instantly shows the equivalent RGB and HSL values. You can copy any format with one click." }
+            },
+            {
+                "@type": "Question",
+                "name": "Which color format should I use in CSS?",
+                "acceptedAnswer": { "@type": "Answer", "text": "All three formats work in CSS. HEX is the most common and compact. RGB is useful when you need to adjust individual channels. HSL is most intuitive for adjusting hue, saturation, and lightness independently." }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo">🧰 ToolboxKit</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#convert-tools">Converters</a>
+            <a href="/#dev-tools">Developer Tools</a>
+            <a href="/#gen-tools">Generators</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="padding-bottom:1rem">
+        <h1>Color Converter HEX RGB HSL</h1>
+        <p>Pick a color or enter a HEX code and instantly see the equivalent RGB and HSL values. Copy any format with one click.</p>
+    </header>
+
+    <!-- Ad: Top -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <main class="tools-container">
+        <div class="tool-area">
+            <div class="row">
+                <div>
+                    <label>Pick or enter color:</label>
+                    <div style="display:flex;gap:0.5rem;align-items:center">
+                        <input type="color" id="clr-picker" value="#6366f1" style="width:50px;height:40px;border:none;cursor:pointer">
+                        <input type="text" id="clr-hex" value="#6366f1" placeholder="#hex" style="flex:1">
+                    </div>
+                </div>
+            </div>
+            <div class="color-preview" id="clr-preview" style="background:#6366f1"></div>
+            <div class="stats">
+                <div class="stat"><span class="num" id="clr-r" style="font-size:1.2rem">99</span><span class="label">Red</span></div>
+                <div class="stat"><span class="num" id="clr-g" style="font-size:1.2rem">102</span><span class="label">Green</span></div>
+                <div class="stat"><span class="num" id="clr-b" style="font-size:1.2rem">241</span><span class="label">Blue</span></div>
+            </div>
+            <div style="margin-top:1rem">
+                <div><strong>HEX:</strong> <span id="clr-hex-out">#6366f1</span> <button class="copy-btn" onclick="copyInner('clr-hex-out')">Copy</button></div>
+                <div><strong>RGB:</strong> <span id="clr-rgb-out">rgb(99, 102, 241)</span> <button class="copy-btn" onclick="copyInner('clr-rgb-out')">Copy</button></div>
+                <div><strong>HSL:</strong> <span id="clr-hsl-out">hsl(239, 84%, 67%)</span> <button class="copy-btn" onclick="copyInner('clr-hsl-out')">Copy</button></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Ad: Middle -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <section class="tools-container">
+        <h2>Related Tools</h2>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h3>JSON Formatter</h3>
+                <p>Format, validate, and minify JSON data.</p>
+                <a href="json-formatter.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>QR Code Generator</h3>
+                <p>Generate QR codes from any text or URL.</p>
+                <a href="qr-code-generator.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>Unix Timestamp Converter</h3>
+                <p>Convert between Unix timestamps and human-readable dates.</p>
+                <a href="unix-timestamp.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="tools-container">
+        <h2>Frequently Asked Questions</h2>
+        <div style="max-width:800px">
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What is the difference between HEX, RGB, and HSL?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">HEX uses a 6-digit hexadecimal code (e.g., #6366f1). RGB specifies Red, Green, Blue values from 0-255 (e.g., rgb(99, 102, 241)). HSL uses Hue (0-360), Saturation (0-100%), and Lightness (0-100%) (e.g., hsl(239, 84%, 67%)). They all represent the same colors, just in different formats.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">How do I convert HEX to RGB?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Enter or pick a color using the color picker or type a HEX code. The tool instantly shows the equivalent RGB and HSL values. You can copy any format with one click.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">Which color format should I use in CSS?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">All three formats work in CSS. HEX is the most common and compact. RGB is useful when you need to adjust individual channels. HSL is most intuitive for adjusting hue, saturation, and lightness independently.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Ad: Bottom -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <footer>
+        <p>ToolboxKit — Free online tools. All processing happens in your browser. No data is sent to any server.</p>
+        <p><a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a></p>
+    </footer>
+
+    <script>
+    function escHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+    function copyText(id) {
+        const text = document.getElementById(id).textContent;
+        navigator.clipboard.writeText(text).then(() => {
+            const btn = event.target;
+            const orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = orig, 1500);
+        });
+    }
+
+    const hexToRgb = (hex) => {
+        hex = hex.replace('#', '');
+        if (hex.length === 3) hex = hex.split('').map(c => c+c).join('');
+        return { r: parseInt(hex.substr(0,2),16), g: parseInt(hex.substr(2,2),16), b: parseInt(hex.substr(4,2),16) };
+    };
+    const rgbToHsl = (r,g,b) => {
+        r/=255; g/=255; b/=255;
+        const max=Math.max(r,g,b), min=Math.min(r,g,b), l=(max+min)/2;
+        let h,s;
+        if(max===min) { h=s=0; }
+        else {
+            const d=max-min;
+            s=l>0.5?d/(2-max-min):d/(max+min);
+            switch(max){case r:h=((g-b)/d+(g<b?6:0))/6;break;case g:h=((b-r)/d+2)/6;break;case b:h=((r-g)/d+4)/6;break;}
+        }
+        return { h: Math.round(h*360), s: Math.round(s*100), l: Math.round(l*100) };
+    };
+    const updateColor = (hex) => {
+        const rgb = hexToRgb(hex);
+        const hsl = rgbToHsl(rgb.r, rgb.g, rgb.b);
+        document.getElementById('clr-preview').style.background = hex;
+        document.getElementById('clr-r').textContent = rgb.r;
+        document.getElementById('clr-g').textContent = rgb.g;
+        document.getElementById('clr-b').textContent = rgb.b;
+        document.getElementById('clr-hex-out').textContent = hex;
+        document.getElementById('clr-rgb-out').textContent = `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`;
+        document.getElementById('clr-hsl-out').textContent = `hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`;
+    };
+    document.getElementById('clr-picker').addEventListener('input', (e) => {
+        document.getElementById('clr-hex').value = e.target.value;
+        updateColor(e.target.value);
+    });
+    document.getElementById('clr-hex').addEventListener('input', (e) => {
+        let val = e.target.value;
+        if (/^#[0-9a-f]{6}$/i.test(val)) {
+            document.getElementById('clr-picker').value = val;
+            updateColor(val);
+        }
+    });
+    window.copyInner = (id) => {
+        navigator.clipboard.writeText(document.getElementById(id).textContent).then(() => {
+            const btn = event.target;
+            const orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = orig, 1500);
+        });
+    };
+    </script>
+</body>
+</html>
