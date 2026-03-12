@@ -13,6 +13,21 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://toolboxkit.netlify.app/case-converter.html">
     <link rel="stylesheet" href="style.css">
+    <style>
+    .affiliate-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:1rem}
+    .affiliate-card{display:block;padding:1rem 1.25rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);text-decoration:none;color:inherit;transition:border-color .2s,box-shadow .2s}
+    .affiliate-card:hover{border-color:var(--primary);box-shadow:0 2px 8px rgba(99,102,241,.12)}
+    .affiliate-label{display:inline-block;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:var(--primary);margin-bottom:.25rem}
+    .affiliate-card strong{display:block;font-size:.95rem;margin-bottom:.2rem}
+    .affiliate-desc{font-size:.82rem;color:var(--text-muted)}
+    .email-capture{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:1rem}
+    .email-capture-text{flex:1;min-width:200px}
+    .email-capture-text strong{display:block;font-size:1rem;margin-bottom:.15rem}
+    .email-capture-text span{font-size:.85rem;color:var(--text-muted)}
+    .email-capture-form{display:flex;gap:.5rem;flex:1;min-width:250px}
+    .email-input{flex:1;padding:.5rem .75rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--bg);color:var(--text);font-size:.9rem}
+    .email-btn{white-space:nowrap}
+    </style>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2850355877461307" crossorigin="anonymous"></script>
     <script type="application/ld+json">
     {
@@ -91,6 +106,21 @@
         </div>
     </main>
 
+    <!-- Email Capture -->
+    <div class="tools-container">
+        <div class="email-capture">
+            <div class="email-capture-text">
+                <strong>Get developer tips weekly</strong>
+                <span>Join 500+ devs who get our best tool tips and tricks.</span>
+            </div>
+            <div class="email-capture-form" id="email-form">
+                <input type="email" id="email-input" placeholder="you@example.com" class="email-input">
+                <button class="btn email-btn" onclick="subscribeEmail()">Subscribe</button>
+            </div>
+            <div id="email-success" style="display:none;color:var(--success);font-weight:600">Thanks for subscribing!</div>
+        </div>
+    </div>
+
     <!-- Ad: Middle -->
     <div class="ad-slot">
         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
@@ -115,6 +145,23 @@
                 <p>Test regular expressions with real-time matching.</p>
                 <a href="regex-tester.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
             </div>
+        </div>
+    </section>
+
+    <!-- Affiliate Tools -->
+    <section class="tools-container">
+        <h2>Recommended Tools</h2>
+        <div class="affiliate-cards">
+            <a href="https://grammarly.com" rel="nofollow sponsored" target="_blank" class="affiliate-card">
+                <span class="affiliate-label">Recommended</span>
+                <strong>Write better with Grammarly</strong>
+                <span class="affiliate-desc">Free writing assistant</span>
+            </a>
+            <a href="https://notion.so" rel="nofollow sponsored" target="_blank" class="affiliate-card">
+                <span class="affiliate-label">Recommended</span>
+                <strong>Organize with Notion</strong>
+                <span class="affiliate-desc">Free notes and docs platform</span>
+            </a>
         </div>
     </section>
 
@@ -161,6 +208,16 @@
             btn.textContent = 'Copied!';
             setTimeout(() => btn.textContent = orig, 1500);
         });
+    }
+
+    function subscribeEmail() {
+        const email = document.getElementById('email-input').value;
+        if (!email || !email.includes('@')) { alert('Please enter a valid email.'); return; }
+        let subs = JSON.parse(localStorage.getItem('toolboxkit_subscribers') || '[]');
+        if (!subs.includes(email)) subs.push(email);
+        localStorage.setItem('toolboxkit_subscribers', JSON.stringify(subs));
+        document.getElementById('email-form').style.display = 'none';
+        document.getElementById('email-success').style.display = 'block';
     }
 
     window.caseConvert = (type) => {
