@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToolboxKit — Free Online Tools for Developers & Everyone</title>
+    <meta name="description" content="Free online tools: JSON formatter, word counter, base64 encoder, password generator, color converter, markdown preview, and more. No signup required.">
+    <meta name="keywords" content="online tools, JSON formatter, word counter, base64 encoder, password generator, color converter, free developer tools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://toolboxkit.netlify.app/">
+    <meta property="og:title" content="ToolboxKit — Free Online Tools">
+    <meta property="og:description" content="50+ free online tools for developers and everyone. No signup required.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google AdSense - Replace with your AdSense code -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "ToolboxKit",
+        "url": "https://toolboxkit.netlify.app/",
+        "description": "Free online tools for developers and everyone",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://toolboxkit.netlify.app/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo">🧰 ToolboxKit</a>
+        <div class="nav-links">
+            <a href="#text-tools">Text</a>
+            <a href="#dev-tools">Developer</a>
+            <a href="#convert-tools">Converters</a>
+            <a href="#gen-tools">Generators</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Free Online Tools — No Signup Required</h1>
+        <p>Developer tools, text utilities, converters, and generators. Fast, private, runs entirely in your browser.</p>
+        <div class="search-box">
+            <input type="text" id="toolSearch" placeholder="Search tools..." aria-label="Search tools">
+        </div>
+    </header>
+
+    <!-- Ad Slot: Top Banner -->
+    <div class="ad-slot" id="ad-top">
+        <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins> -->
+        <div class="ad-placeholder">Ad Space — Top Banner</div>
+    </div>
+
+    <main class="tools-container">
+        <!-- TEXT TOOLS -->
+        <section id="text-tools">
+            <h2>📝 Text Tools</h2>
+            <div class="tools-grid">
+                <div class="tool-card" data-tool="word-counter" data-keywords="word count character letter sentence paragraph">
+                    <h3>Word Counter</h3>
+                    <p>Count words, characters, sentences, and paragraphs instantly.</p>
+                    <button onclick="openTool('word-counter')">Open Tool →</button>
+                </div>
+                <div class="tool-card" data-tool="case-converter" data-keywords="uppercase lowercase title case camel snake">
+                    <h3>Case Converter</h3>
+                    <p>Convert text between UPPER, lower, Title, camelCase, snake_case.</p>
+                    <button onclick="openTool('case-converter')">Open Tool →</button>
+                </div>
+                <div class="tool-card" data-tool="lorem-ipsum" data-keywords="lorem ipsum placeholder dummy text">
+                    <h3>Lorem Ipsum Generator</h3>
+                    <p>Generate placeholder text for your designs and mockups.</p>
+                    <button onclick="openTool('lorem-ipsum')">Open Tool →</button>
+                </div>
+                <div class="tool-card" data-tool="text-diff" data-keywords="diff compare text difference">
+                    <h3>Text Diff Checker</h3>
+                    <p>Compare two texts and highlight the differences.</p>
+                    <button onclick="openTool('text-diff')">Open Tool →</button>
+                </div>
+                <div class="tool-card" data-tool="string-replace" data-keywords="find replace text string">
+                    <h3>Find & Replace</h3>
+                    <p>Find and replace text with regex support.</p>
+                    <button onclick="openTool('string-replace')">Open Tool →</button>
+                </div>
+                <div class="tool-card" data-tool="text-sort" data-keywords="sort lines alphabetical reverse">
+                    <h3>Sort Lines</h3>
+                    <p>Sort lines alphabetically, reverse, or remove duplicates.</p>
+                    <button onclick="openTool('text-sort')">Open Tool →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEVELOPER TOOLS -->
+        <section id="dev-tools">
+            <h2>💻 Developer Tools</h2>
+            <div class="tools-grid">
+                <div class="tool-card" data-tool="json-formatter" data-keywords="json format beautify minify validate">
+                    <h3>JSON Formatter</h3>
+                    <p>Format, validate, and minify JSON data with syntax highlighting.</p>
+                    <button onclick="openTool('json-formatter')">Open Tool →</button>
+                </div>
+                <div class="tool-card" data-tool="regex-tester" data-keywords="regex regular expression test match">
+                    <h3>Regex Tester</h3>
+                    <p>Test regular expressions with real-time matching and groups.</p>
+                    <button onclick="openTool('regex-tester')">Open Tool →</button>
+                </div>
+                <div class="tool-card" data-tool="html-preview" data-keywords="html preview render live">
+                    <h3>HTML Preview</h3>
+                    <p>Write HTML/CSS/JS and see a live preview instantly.</p>
+                    <button onclick="openTool('html-preview')">Open Tool →</button>
+                </div>
+                <div class="tool-card" data-tool="markdown-preview" data-keywords="markdown preview render md">
+                    <h3>Markdown Preview</h3>
+                    <p>Write Markdown and see rendered output in real time.</p>
+                    <button onclick="openTool('markdown-preview')">Open Tool →</button>
+                </div>
+                <div class="tool-card" data-tool="css-minifier" data-keywords="css minify compress beautify">
+                    <h3>CSS Minifier</h3>
+                    <p>Minify or beautify CSS code to reduce file size.</p>
+                    <button onclick="openTool('css-minifier')">Open Tool →</button>
+                </div>
+                <div class="tool-card" data-tool="sql-formatter" data-keywords="sql format beautify query">
+                    <h3>SQL Formatter</h3>
+                    <p>Format and beautify SQL queries for readability.</p>
+                    <button onclick="openTool('sql-formatter')">Open Tool →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ad Slot: Mid Content -->
+        <div class="ad-slot" id="ad-mid">
+            <div class="ad-placeholder">Ad Space — Mid Content</div>
+        </div>
+
+        <!-- CONVERTER TOOLS -->
+        <section id="convert-tools">
+            <h2>🔄 Converters</h2>
+            <div class="tools-grid">
+                <div class="tool-card" data-tool="base64" data-keywords="base64 encode decode">
+                    <h3>Base64 Encoder/Decoder</h3>
+                    <p>Encode or decode Base64 strings instantly.</p>
+                    <button onclick="openTool('base64')">Open Tool →</button>
+                </div>
+                <div class="tool-card" data-tool="url-encoder" data-keywords="url encode decode percent">
+                    <h3>URL Encoder/Decoder</h3>
+                    <p>Encode or decode URL components.</p>
+                    <button onclick="openTool('url-encoder')">Open Tool →</button>
+                </div>
+                <div class="tool-card" data-tool="color-converter" data-keywords="color hex rgb hsl convert picker">
+                    <h3>Color Converter</h3>
+                    <p>Convert between HEX, RGB, HSL color formats with a picker.</p>
+                    <button onclick="openTool('color-converter')">Open Tool →</button>
+                </div>
+                <div class="tool-card" data-tool="number-base" data-keywords="number base binary hex octal decimal convert">
+                    <h3>Number Base Converter</h3>
+                    <p>Convert numbers between binary, octal, decimal, and hex.</p>
+                    <button onclick="openTool('number-base')">Open Tool →</button>
+                </div>
+                <div class="tool-card" data-tool="unix-timestamp" data-keywords="unix timestamp epoch date time convert">
+                    <h3>Unix Timestamp Converter</h3>
+                    <p>Convert between Unix timestamps and human-readable dates.</p>
+                    <button onclick="openTool('unix-timestamp')">Open Tool →</button>
+                </div>
+                <div class="tool-card" data-tool="unit-converter" data-keywords="unit convert length weight temperature">
+                    <h3>Unit Converter</h3>
+                    <p>Convert between units of length, weight, temperature, and more.</p>
+                    <button onclick="openTool('unit-converter')">Open Tool →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- GENERATOR TOOLS -->
+        <section id="gen-tools">
+            <h2>⚡ Generators</h2>
+            <div class="tools-grid">
+                <div class="tool-card" data-tool="password-gen" data-keywords="password generate random secure strong">
+                    <h3>Password Generator</h3>
+                    <p>Generate strong, secure passwords with custom rules.</p>
+                    <button onclick="openTool('password-gen')">Open Tool →</button>
+                </div>
+                <div class="tool-card" data-tool="uuid-gen" data-keywords="uuid guid generate unique id">
+                    <h3>UUID Generator</h3>
+                    <p>Generate random UUIDs/GUIDs instantly.</p>
+                    <button onclick="openTool('uuid-gen')">Open Tool →</button>
+                </div>
+                <div class="tool-card" data-tool="hash-gen" data-keywords="hash md5 sha256 sha512 generate">
+                    <h3>Hash Generator</h3>
+                    <p>Generate MD5, SHA-256, SHA-512 hashes from text.</p>
+                    <button onclick="openTool('hash-gen')">Open Tool →</button>
+                </div>
+                <div class="tool-card" data-tool="qr-gen" data-keywords="qr code generate barcode">
+                    <h3>QR Code Generator</h3>
+                    <p>Generate QR codes from any text or URL.</p>
+                    <button onclick="openTool('qr-gen')">Open Tool →</button>
+                </div>
+                <div class="tool-card" data-tool="favicon-gen" data-keywords="favicon generate icon emoji">
+                    <h3>Emoji Favicon Generator</h3>
+                    <p>Create a favicon from any emoji — download as .ico.</p>
+                    <button onclick="openTool('favicon-gen')">Open Tool →</button>
+                </div>
+                <div class="tool-card" data-tool="meta-gen" data-keywords="meta tag seo og open graph generate">
+                    <h3>Meta Tag Generator</h3>
+                    <p>Generate SEO meta tags and Open Graph tags for your pages.</p>
+                    <button onclick="openTool('meta-gen')">Open Tool →</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Ad Slot: Bottom Banner -->
+    <div class="ad-slot" id="ad-bottom">
+        <div class="ad-placeholder">Ad Space — Bottom Banner</div>
+    </div>
+
+    <footer>
+        <p>ToolboxKit — Free online tools. All processing happens in your browser. No data is sent to any server.</p>
+        <p><a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a></p>
+    </footer>
+
+    <!-- Tool Modal -->
+    <div id="toolModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <button class="close-btn" onclick="closeModal()">✕</button>
+            </div>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="tools.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
