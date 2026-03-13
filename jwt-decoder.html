@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JWT Decoder Online - JSON Web Token Parser | ToolboxKit</title>
+    <meta name="description" content="Decode and inspect JWT tokens online. View header, payload, and signature with color-coded sections. Check expiration time. Free, no signup required.">
+    <meta name="keywords" content="jwt decoder, jwt parser, json web token decoder, decode jwt online, jwt token viewer, jwt debugger, jwt inspector, jwt expiration">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://toolboxkit.netlify.app/jwt-decoder.html">
+    <meta property="og:title" content="JWT Decoder Online - JSON Web Token Parser">
+    <meta property="og:description" content="Decode and inspect JWT tokens. View header, payload, signature with color-coded sections.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolboxkit.netlify.app/jwt-decoder.html">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    .affiliate-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:1rem}
+    .affiliate-card{display:block;padding:1rem 1.25rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);text-decoration:none;color:inherit;transition:border-color .2s,box-shadow .2s}
+    .affiliate-card:hover{border-color:var(--primary);box-shadow:0 2px 8px rgba(99,102,241,.12)}
+    .affiliate-label{display:inline-block;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:var(--primary);margin-bottom:.25rem}
+    .affiliate-card strong{display:block;font-size:.95rem;margin-bottom:.2rem}
+    .affiliate-desc{font-size:.82rem;color:var(--text-muted)}
+    .email-capture{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:1rem}
+    .email-capture-text{flex:1;min-width:200px}
+    .email-capture-text strong{display:block;font-size:1rem;margin-bottom:.15rem}
+    .email-capture-text span{font-size:.85rem;color:var(--text-muted)}
+    .email-capture-form{display:flex;gap:.5rem;flex:1;min-width:250px}
+    .email-input{flex:1;padding:.5rem .75rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--bg);color:var(--text);font-size:.9rem}
+    .email-btn{white-space:nowrap}
+    .jwt-section{margin-top:1rem;padding:1rem;border-radius:var(--radius);border:1px solid var(--border)}
+    .jwt-header-section{border-left:4px solid #e74c3c}
+    .jwt-payload-section{border-left:4px solid #9b59b6}
+    .jwt-sig-section{border-left:4px solid #3498db}
+    .jwt-section h3{margin:0 0 .5rem;font-size:.95rem}
+    .jwt-section pre{margin:0;white-space:pre-wrap;word-break:break-all;font-size:.85rem}
+    .jwt-token-display{font-family:monospace;word-break:break-all;font-size:.85rem;line-height:1.6}
+    .jwt-token-display .jwt-h{color:#e74c3c}
+    .jwt-token-display .jwt-p{color:#9b59b6}
+    .jwt-token-display .jwt-s{color:#3498db}
+    .exp-info{margin-top:.5rem;padding:.5rem .75rem;border-radius:var(--radius);font-size:.85rem}
+    .exp-valid{background:#d4edda;color:#155724}
+    .exp-expired{background:#f8d7da;color:#721c24}
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2850355877461307" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "JWT Decoder Online",
+        "url": "https://toolboxkit.netlify.app/jwt-decoder.html",
+        "description": "Decode and inspect JWT tokens. View header, payload, and signature with color-coded sections. Check expiration time.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is a JWT token?",
+                "acceptedAnswer": { "@type": "Answer", "text": "A JSON Web Token (JWT) is a compact, URL-safe token format used for securely transmitting information between parties. It consists of three parts: a header (algorithm and type), a payload (claims/data), and a signature." }
+            },
+            {
+                "@type": "Question",
+                "name": "Does this tool verify the JWT signature?",
+                "acceptedAnswer": { "@type": "Answer", "text": "This tool decodes and displays the JWT contents but does not verify the cryptographic signature, as that requires the secret key or public key. It is a decoder/inspector, not a validator." }
+            },
+            {
+                "@type": "Question",
+                "name": "Is it safe to paste my JWT here?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. This tool runs entirely in your browser. No token data is sent to any server. However, you should never share JWTs publicly as they may contain sensitive information." }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I check if a JWT is expired?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Paste your JWT and the tool will automatically check the 'exp' claim in the payload. It will show whether the token is still valid or has expired, along with the exact expiration date and time." }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo">🧰 ToolboxKit</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#dev-tools">Developer Tools</a>
+            <a href="/#convert-tools">Converters</a>
+            <a href="/#gen-tools">Generators</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="padding-bottom:1rem">
+        <h1>JWT Decoder Online</h1>
+        <p>Decode and inspect JSON Web Tokens. View header, payload, and signature with color-coded sections. Check token expiration instantly.</p>
+    </header>
+
+    <!-- Ad: Top -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <main class="tools-container">
+        <div class="tool-area">
+            <label>Paste JWT Token:</label>
+            <textarea id="jwt-input" rows="5" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"></textarea>
+            <div class="btn-group">
+                <button class="btn" onclick="decodeJwt()">Decode JWT</button>
+                <button class="copy-btn" onclick="copyText('jwt-payload-content')">Copy Payload</button>
+            </div>
+
+            <div id="jwt-token-colored" class="jwt-token-display" style="margin-top:1rem;display:none"></div>
+
+            <div id="jwt-header-box" class="jwt-section jwt-header-section" style="display:none">
+                <h3 style="color:#e74c3c">Header (JOSE)</h3>
+                <pre id="jwt-header-content"></pre>
+            </div>
+
+            <div id="jwt-payload-box" class="jwt-section jwt-payload-section" style="display:none">
+                <h3 style="color:#9b59b6">Payload (Claims)</h3>
+                <pre id="jwt-payload-content"></pre>
+                <div id="jwt-exp-info"></div>
+            </div>
+
+            <div id="jwt-sig-box" class="jwt-section jwt-sig-section" style="display:none">
+                <h3 style="color:#3498db">Signature</h3>
+                <pre id="jwt-sig-content"></pre>
+            </div>
+
+            <div id="jwt-error" style="margin-top:1rem;color:var(--danger);display:none"></div>
+        </div>
+    </main>
+
+    <!-- Email Capture -->
+    <div class="tools-container">
+        <div class="email-capture">
+            <div class="email-capture-text">
+                <strong>Get developer tips weekly</strong>
+                <span>Join 500+ devs who get our best tool tips and tricks.</span>
+            </div>
+            <div class="email-capture-form" id="email-form">
+                <input type="email" id="email-input" placeholder="you@example.com" class="email-input">
+                <button class="btn email-btn" onclick="subscribeEmail()">Subscribe</button>
+            </div>
+            <div id="email-success" style="display:none;color:var(--success);font-weight:600">Thanks for subscribing!</div>
+        </div>
+    </div>
+
+    <!-- Ad: Middle -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Related Tools -->
+    <section class="tools-container">
+        <h2>Related Tools</h2>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h3>JSON Formatter</h3>
+                <p>Format, beautify, and validate JSON data.</p>
+                <a href="json-formatter.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>Base64 Encoder/Decoder</h3>
+                <p>Encode or decode Base64 strings instantly.</p>
+                <a href="base64.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>Hash Generator</h3>
+                <p>Generate MD5, SHA-1, SHA-256 hashes.</p>
+                <a href="hash-generator.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Affiliate Tools -->
+    <section class="tools-container">
+        <h2>Recommended Tools</h2>
+        <div class="affiliate-cards">
+            <a href="https://postman.com" rel="nofollow sponsored" target="_blank" class="affiliate-card">
+                <span class="affiliate-label">Recommended</span>
+                <strong>API testing with Postman</strong>
+                <span class="affiliate-desc">Free API development platform</span>
+            </a>
+            <a href="https://vercel.com" rel="nofollow sponsored" target="_blank" class="affiliate-card">
+                <span class="affiliate-label">Recommended</span>
+                <strong>Build faster with Vercel</strong>
+                <span class="affiliate-desc">Free hosting for frontend projects</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="tools-container">
+        <h2>Frequently Asked Questions</h2>
+        <div style="max-width:800px">
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What is a JWT token?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">A JSON Web Token (JWT) is a compact, URL-safe token format used for securely transmitting information between parties. It consists of three parts: a header (algorithm and type), a payload (claims/data), and a signature.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">Does this tool verify the JWT signature?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">This tool decodes and displays the JWT contents but does not verify the cryptographic signature, as that requires the secret key or public key. It is a decoder/inspector, not a validator.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">Is it safe to paste my JWT here?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Yes. This tool runs entirely in your browser. No token data is sent to any server. However, you should never share JWTs publicly as they may contain sensitive information.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">How do I check if a JWT is expired?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Paste your JWT and the tool will automatically check the "exp" claim in the payload. It will show whether the token is still valid or has expired, along with the exact expiration date and time.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Ad: Bottom -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <footer>
+        <p>ToolboxKit — Free online tools. All processing happens in your browser. No data is sent to any server.</p>
+        <p><a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a></p>
+    </footer>
+
+    <script>
+    function escHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+    function copyText(id) {
+        const text = document.getElementById(id).textContent;
+        navigator.clipboard.writeText(text).then(() => {
+            const btn = event.target;
+            const orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = orig, 1500);
+        });
+    }
+    function subscribeEmail() {
+        const email = document.getElementById('email-input').value;
+        if (!email || !email.includes('@')) { alert('Please enter a valid email.'); return; }
+        let subs = JSON.parse(localStorage.getItem('toolboxkit_subscribers') || '[]');
+        if (!subs.includes(email)) subs.push(email);
+        localStorage.setItem('toolboxkit_subscribers', JSON.stringify(subs));
+        document.getElementById('email-form').style.display = 'none';
+        document.getElementById('email-success').style.display = 'block';
+    }
+
+    function base64UrlDecode(str) {
+        str = str.replace(/-/g, '+').replace(/_/g, '/');
+        while (str.length % 4) str += '=';
+        return decodeURIComponent(atob(str).split('').map(function(c) {
+            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+        }).join(''));
+    }
+
+    function decodeJwt() {
+        const token = document.getElementById('jwt-input').value.trim();
+        const errorEl = document.getElementById('jwt-error');
+        const coloredEl = document.getElementById('jwt-token-colored');
+        const headerBox = document.getElementById('jwt-header-box');
+        const payloadBox = document.getElementById('jwt-payload-box');
+        const sigBox = document.getElementById('jwt-sig-box');
+
+        errorEl.style.display = 'none';
+        coloredEl.style.display = 'none';
+        headerBox.style.display = 'none';
+        payloadBox.style.display = 'none';
+        sigBox.style.display = 'none';
+
+        const parts = token.split('.');
+        if (parts.length !== 3) {
+            errorEl.textContent = 'Invalid JWT: A JWT must have exactly 3 parts separated by dots.';
+            errorEl.style.display = 'block';
+            return;
+        }
+
+        try {
+            const header = JSON.parse(base64UrlDecode(parts[0]));
+            const payload = JSON.parse(base64UrlDecode(parts[1]));
+
+            // Color-coded token display
+            coloredEl.innerHTML = '<span class="jwt-h">' + escHtml(parts[0]) + '</span>.<span class="jwt-p">' + escHtml(parts[1]) + '</span>.<span class="jwt-s">' + escHtml(parts[2]) + '</span>';
+            coloredEl.style.display = 'block';
+
+            // Header
+            document.getElementById('jwt-header-content').textContent = JSON.stringify(header, null, 2);
+            headerBox.style.display = 'block';
+
+            // Payload
+            document.getElementById('jwt-payload-content').textContent = JSON.stringify(payload, null, 2);
+            payloadBox.style.display = 'block';
+
+            // Expiration check
+            const expInfo = document.getElementById('jwt-exp-info');
+            if (payload.exp) {
+                const expDate = new Date(payload.exp * 1000);
+                const now = new Date();
+                const isExpired = expDate < now;
+                expInfo.className = 'exp-info ' + (isExpired ? 'exp-expired' : 'exp-valid');
+                expInfo.innerHTML = (isExpired ? 'EXPIRED' : 'VALID') + ' — Expires: ' + expDate.toLocaleString() + (payload.iat ? '<br>Issued: ' + new Date(payload.iat * 1000).toLocaleString() : '');
+            } else if (payload.iat) {
+                expInfo.className = 'exp-info exp-valid';
+                expInfo.innerHTML = 'Issued: ' + new Date(payload.iat * 1000).toLocaleString() + ' (no expiration set)';
+            } else {
+                expInfo.innerHTML = '';
+            }
+
+            // Signature
+            document.getElementById('jwt-sig-content').textContent = parts[2];
+            sigBox.style.display = 'block';
+
+        } catch (e) {
+            errorEl.textContent = 'Error decoding JWT: ' + e.message;
+            errorEl.style.display = 'block';
+        }
+    }
+    </script>
+</body>
+</html>

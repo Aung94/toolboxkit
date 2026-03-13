@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to Base64 Converter Online - Free Image Encoder | ToolboxKit</title>
+    <meta name="description" content="Convert images to Base64 strings online for free. Upload PNG, JPG, GIF, SVG, or WebP images and get Base64 encoded output instantly. Preview and copy.">
+    <meta name="keywords" content="image to base64, base64 image encoder, convert image to base64, png to base64, jpg to base64, image base64 converter online, free image encoder">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://toolboxkit.netlify.app/image-to-base64.html">
+    <meta property="og:title" content="Image to Base64 Converter Online - Free Image Encoder">
+    <meta property="og:description" content="Convert images to Base64 encoded strings instantly. Supports PNG, JPG, GIF, SVG, WebP.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolboxkit.netlify.app/image-to-base64.html">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    .affiliate-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:1rem}
+    .affiliate-card{display:block;padding:1rem 1.25rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);text-decoration:none;color:inherit;transition:border-color .2s,box-shadow .2s}
+    .affiliate-card:hover{border-color:var(--primary);box-shadow:0 2px 8px rgba(99,102,241,.12)}
+    .affiliate-label{display:inline-block;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:var(--primary);margin-bottom:.25rem}
+    .affiliate-card strong{display:block;font-size:.95rem;margin-bottom:.2rem}
+    .affiliate-desc{font-size:.82rem;color:var(--text-muted)}
+    .email-capture{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:1rem}
+    .email-capture-text{flex:1;min-width:200px}
+    .email-capture-text strong{display:block;font-size:1rem;margin-bottom:.15rem}
+    .email-capture-text span{font-size:.85rem;color:var(--text-muted)}
+    .email-capture-form{display:flex;gap:.5rem;flex:1;min-width:250px}
+    .email-input{flex:1;padding:.5rem .75rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--bg);color:var(--text);font-size:.9rem}
+    .email-btn{white-space:nowrap}
+    .img-preview{max-width:300px;max-height:300px;border:1px solid var(--border);border-radius:var(--radius);margin-top:1rem}
+    .drop-zone{border:2px dashed var(--border);border-radius:var(--radius);padding:2rem;text-align:center;cursor:pointer;transition:border-color .2s}
+    .drop-zone:hover,.drop-zone.dragover{border-color:var(--primary)}
+    .file-info{font-size:.85rem;color:var(--text-muted);margin-top:.5rem}
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2850355877461307" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Image to Base64 Converter Online",
+        "url": "https://toolboxkit.netlify.app/image-to-base64.html",
+        "description": "Convert images to Base64 encoded strings instantly. Supports PNG, JPG, GIF, SVG, WebP.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What image formats are supported?",
+                "acceptedAnswer": { "@type": "Answer", "text": "This tool supports all common image formats including PNG, JPG/JPEG, GIF, SVG, WebP, BMP, and ICO." }
+            },
+            {
+                "@type": "Question",
+                "name": "What is Base64 encoding for images?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Base64 encoding converts binary image data into an ASCII string. This is useful for embedding images directly in HTML, CSS, or JSON without needing a separate file." }
+            },
+            {
+                "@type": "Question",
+                "name": "Is there a file size limit?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Since the conversion runs in your browser, there is no server-side limit. However, very large images may be slow to process and the resulting Base64 string will be about 33% larger than the original file." }
+            },
+            {
+                "@type": "Question",
+                "name": "Is my image uploaded to any server?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. The image is processed entirely in your browser using the FileReader API. Nothing is sent to any server." }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo">🧰 ToolboxKit</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#dev-tools">Developer Tools</a>
+            <a href="/#convert-tools">Converters</a>
+            <a href="/#gen-tools">Generators</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="padding-bottom:1rem">
+        <h1>Image to Base64 Converter</h1>
+        <p>Upload an image and get its Base64 encoded string. Supports PNG, JPG, GIF, SVG, WebP, and more. Free and private.</p>
+    </header>
+
+    <!-- Ad: Top -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <main class="tools-container">
+        <div class="tool-area">
+            <div class="drop-zone" id="drop-zone" onclick="document.getElementById('file-input').click()">
+                <p style="font-size:1.1rem;margin-bottom:.5rem">Click or drag an image here</p>
+                <p style="font-size:.85rem;color:var(--text-muted)">Supports PNG, JPG, GIF, SVG, WebP</p>
+                <input type="file" id="file-input" accept="image/*" style="display:none">
+            </div>
+            <div id="file-info" class="file-info"></div>
+            <img id="img-preview" class="img-preview" style="display:none">
+            <div class="btn-group" style="margin-top:1rem">
+                <button class="copy-btn" onclick="copyBase64()">Copy Base64</button>
+                <button class="btn" onclick="copyDataUri()">Copy Data URI</button>
+                <button class="btn" onclick="copyImgTag()">Copy &lt;img&gt; Tag</button>
+            </div>
+            <label style="margin-top:1rem;display:block">Base64 Output:</label>
+            <div class="output-box" id="b64-output" style="min-height:100px;word-break:break-all"></div>
+        </div>
+    </main>
+
+    <!-- Email Capture -->
+    <div class="tools-container">
+        <div class="email-capture">
+            <div class="email-capture-text">
+                <strong>Get developer tips weekly</strong>
+                <span>Join 500+ devs who get our best tool tips and tricks.</span>
+            </div>
+            <div class="email-capture-form" id="email-form">
+                <input type="email" id="email-input" placeholder="you@example.com" class="email-input">
+                <button class="btn email-btn" onclick="subscribeEmail()">Subscribe</button>
+            </div>
+            <div id="email-success" style="display:none;color:var(--success);font-weight:600">Thanks for subscribing!</div>
+        </div>
+    </div>
+
+    <!-- Ad: Middle -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Related Tools -->
+    <section class="tools-container">
+        <h2>Related Tools</h2>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h3>Base64 Encoder/Decoder</h3>
+                <p>Encode or decode Base64 strings instantly.</p>
+                <a href="base64.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>QR Code Generator</h3>
+                <p>Generate QR codes for URLs, text, and more.</p>
+                <a href="qr-code-generator.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>Color Converter</h3>
+                <p>Convert between HEX, RGB, HSL color formats.</p>
+                <a href="color-converter.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Affiliate Tools -->
+    <section class="tools-container">
+        <h2>Recommended Tools</h2>
+        <div class="affiliate-cards">
+            <a href="https://vercel.com" rel="nofollow sponsored" target="_blank" class="affiliate-card">
+                <span class="affiliate-label">Recommended</span>
+                <strong>Deploy with Vercel</strong>
+                <span class="affiliate-desc">Free hosting for frontend projects</span>
+            </a>
+            <a href="https://postman.com" rel="nofollow sponsored" target="_blank" class="affiliate-card">
+                <span class="affiliate-label">Recommended</span>
+                <strong>API testing with Postman</strong>
+                <span class="affiliate-desc">Free API development platform</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="tools-container">
+        <h2>Frequently Asked Questions</h2>
+        <div style="max-width:800px">
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What image formats are supported?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">This tool supports all common image formats including PNG, JPG/JPEG, GIF, SVG, WebP, BMP, and ICO.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What is Base64 encoding for images?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Base64 encoding converts binary image data into an ASCII string. This is useful for embedding images directly in HTML, CSS, or JSON without needing a separate file.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">Is there a file size limit?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Since the conversion runs in your browser, there is no server-side limit. However, very large images may be slow to process and the resulting Base64 string will be about 33% larger than the original file.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">Is my image uploaded to any server?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">No. The image is processed entirely in your browser using the FileReader API. Nothing is sent to any server.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Ad: Bottom -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <footer>
+        <p>ToolboxKit — Free online tools. All processing happens in your browser. No data is sent to any server.</p>
+        <p><a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a></p>
+    </footer>
+
+    <script>
+    function escHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+    function copyText(id) {
+        const text = document.getElementById(id).textContent;
+        navigator.clipboard.writeText(text).then(() => {
+            const btn = event.target;
+            const orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = orig, 1500);
+        });
+    }
+    function subscribeEmail() {
+        const email = document.getElementById('email-input').value;
+        if (!email || !email.includes('@')) { alert('Please enter a valid email.'); return; }
+        let subs = JSON.parse(localStorage.getItem('toolboxkit_subscribers') || '[]');
+        if (!subs.includes(email)) subs.push(email);
+        localStorage.setItem('toolboxkit_subscribers', JSON.stringify(subs));
+        document.getElementById('email-form').style.display = 'none';
+        document.getElementById('email-success').style.display = 'block';
+    }
+
+    let base64Result = '';
+    let dataUri = '';
+    let mimeType = '';
+
+    const dropZone = document.getElementById('drop-zone');
+    const fileInput = document.getElementById('file-input');
+
+    dropZone.addEventListener('dragover', function(e) { e.preventDefault(); dropZone.classList.add('dragover'); });
+    dropZone.addEventListener('dragleave', function() { dropZone.classList.remove('dragover'); });
+    dropZone.addEventListener('drop', function(e) {
+        e.preventDefault();
+        dropZone.classList.remove('dragover');
+        if (e.dataTransfer.files.length) processFile(e.dataTransfer.files[0]);
+    });
+    fileInput.addEventListener('change', function() {
+        if (fileInput.files.length) processFile(fileInput.files[0]);
+    });
+
+    function processFile(file) {
+        if (!file.type.startsWith('image/')) {
+            alert('Please select an image file.');
+            return;
+        }
+        mimeType = file.type;
+        document.getElementById('file-info').textContent = file.name + ' (' + (file.size / 1024).toFixed(1) + ' KB, ' + file.type + ')';
+
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            dataUri = e.target.result;
+            base64Result = dataUri.split(',')[1];
+            document.getElementById('b64-output').textContent = base64Result;
+            const preview = document.getElementById('img-preview');
+            preview.src = dataUri;
+            preview.style.display = 'block';
+        };
+        reader.readAsDataURL(file);
+    }
+
+    function copyBase64() {
+        if (!base64Result) { alert('Please upload an image first.'); return; }
+        navigator.clipboard.writeText(base64Result).then(function() {
+            const btn = event.target;
+            const orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(function() { btn.textContent = orig; }, 1500);
+        });
+    }
+    function copyDataUri() {
+        if (!dataUri) { alert('Please upload an image first.'); return; }
+        navigator.clipboard.writeText(dataUri).then(function() {
+            const btn = event.target;
+            const orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(function() { btn.textContent = orig; }, 1500);
+        });
+    }
+    function copyImgTag() {
+        if (!dataUri) { alert('Please upload an image first.'); return; }
+        const tag = '<img src="' + dataUri + '" alt="image">';
+        navigator.clipboard.writeText(tag).then(function() {
+            const btn = event.target;
+            const orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(function() { btn.textContent = orig; }, 1500);
+        });
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Entity Encoder Decoder Online - Free HTML Escape Tool | ToolboxKit</title>
+    <meta name="description" content="Encode special characters to HTML entities or decode HTML entities back to text. Free online HTML entity encoder and decoder with common entities reference.">
+    <meta name="keywords" content="html entity encoder, html entity decoder, html escape, html unescape, encode html entities, decode html entities, html special characters, html entity converter">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://toolboxkit.netlify.app/html-entity-encoder.html">
+    <meta property="og:title" content="HTML Entity Encoder Decoder Online - Free HTML Escape Tool">
+    <meta property="og:description" content="Encode special characters to HTML entities or decode them back to text. Common entities reference included.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolboxkit.netlify.app/html-entity-encoder.html">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    .affiliate-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:1rem}
+    .affiliate-card{display:block;padding:1rem 1.25rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);text-decoration:none;color:inherit;transition:border-color .2s,box-shadow .2s}
+    .affiliate-card:hover{border-color:var(--primary);box-shadow:0 2px 8px rgba(99,102,241,.12)}
+    .affiliate-label{display:inline-block;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:var(--primary);margin-bottom:.25rem}
+    .affiliate-card strong{display:block;font-size:.95rem;margin-bottom:.2rem}
+    .affiliate-desc{font-size:.82rem;color:var(--text-muted)}
+    .email-capture{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:1rem}
+    .email-capture-text{flex:1;min-width:200px}
+    .email-capture-text strong{display:block;font-size:1rem;margin-bottom:.15rem}
+    .email-capture-text span{font-size:.85rem;color:var(--text-muted)}
+    .email-capture-form{display:flex;gap:.5rem;flex:1;min-width:250px}
+    .email-input{flex:1;padding:.5rem .75rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--bg);color:var(--text);font-size:.9rem}
+    .email-btn{white-space:nowrap}
+    .ref-table{width:100%;border-collapse:collapse;margin-top:1rem;font-size:.85rem}
+    .ref-table th,.ref-table td{border:1px solid var(--border);padding:.4rem .75rem;text-align:left}
+    .ref-table th{background:var(--surface);font-weight:600}
+    .ref-table code{background:var(--bg);padding:.1em .3em;border-radius:3px}
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2850355877461307" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "HTML Entity Encoder Decoder Online",
+        "url": "https://toolboxkit.netlify.app/html-entity-encoder.html",
+        "description": "Encode special characters to HTML entities or decode HTML entities back to text. Common entities reference included.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What are HTML entities?",
+                "acceptedAnswer": { "@type": "Answer", "text": "HTML entities are special codes used to represent characters that have special meaning in HTML, like < (less than), > (greater than), & (ampersand), and \" (quotation mark). They start with & and end with ;." }
+            },
+            {
+                "@type": "Question",
+                "name": "Why do I need to encode HTML entities?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Encoding HTML entities prevents browsers from interpreting special characters as HTML markup. This is essential for security (preventing XSS attacks) and for displaying code snippets on web pages." }
+            },
+            {
+                "@type": "Question",
+                "name": "What characters are encoded?",
+                "acceptedAnswer": { "@type": "Answer", "text": "The most important characters to encode are & (&amp;), < (&lt;), > (&gt;), \" (&quot;), and ' (&#39;). This tool also encodes other special characters into their numeric HTML entity equivalents." }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo">🧰 ToolboxKit</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#dev-tools">Developer Tools</a>
+            <a href="/#convert-tools">Converters</a>
+            <a href="/#gen-tools">Generators</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="padding-bottom:1rem">
+        <h1>HTML Entity Encoder / Decoder</h1>
+        <p>Encode special characters to HTML entities or decode HTML entities back to readable text. Essential for web development and security.</p>
+    </header>
+
+    <!-- Ad: Top -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <main class="tools-container">
+        <div class="tool-area">
+            <label>Input Text:</label>
+            <textarea id="he-input" rows="6" placeholder='<div class="example">Hello & welcome!</div>'></textarea>
+            <div class="btn-group">
+                <button class="btn" onclick="encodeEntities()">Encode</button>
+                <button class="btn" onclick="decodeEntities()">Decode</button>
+                <button class="copy-btn" onclick="copyText('he-output')">Copy Result</button>
+            </div>
+            <label style="margin-top:1rem;display:block">Output:</label>
+            <div class="output-box" id="he-output" style="min-height:100px"></div>
+        </div>
+
+        <div class="tool-area" style="margin-top:2rem">
+            <h2>Common HTML Entities Reference</h2>
+            <table class="ref-table">
+                <thead><tr><th>Character</th><th>Entity Name</th><th>Entity Number</th><th>Description</th></tr></thead>
+                <tbody>
+                    <tr><td>&amp;</td><td><code>&amp;amp;</code></td><td><code>&amp;#38;</code></td><td>Ampersand</td></tr>
+                    <tr><td>&lt;</td><td><code>&amp;lt;</code></td><td><code>&amp;#60;</code></td><td>Less than</td></tr>
+                    <tr><td>&gt;</td><td><code>&amp;gt;</code></td><td><code>&amp;#62;</code></td><td>Greater than</td></tr>
+                    <tr><td>&quot;</td><td><code>&amp;quot;</code></td><td><code>&amp;#34;</code></td><td>Double quote</td></tr>
+                    <tr><td>&#39;</td><td><code>&amp;apos;</code></td><td><code>&amp;#39;</code></td><td>Single quote</td></tr>
+                    <tr><td>&nbsp;</td><td><code>&amp;nbsp;</code></td><td><code>&amp;#160;</code></td><td>Non-breaking space</td></tr>
+                    <tr><td>&copy;</td><td><code>&amp;copy;</code></td><td><code>&amp;#169;</code></td><td>Copyright</td></tr>
+                    <tr><td>&reg;</td><td><code>&amp;reg;</code></td><td><code>&amp;#174;</code></td><td>Registered</td></tr>
+                    <tr><td>&trade;</td><td><code>&amp;trade;</code></td><td><code>&amp;#8482;</code></td><td>Trademark</td></tr>
+                    <tr><td>&euro;</td><td><code>&amp;euro;</code></td><td><code>&amp;#8364;</code></td><td>Euro sign</td></tr>
+                    <tr><td>&pound;</td><td><code>&amp;pound;</code></td><td><code>&amp;#163;</code></td><td>Pound sign</td></tr>
+                    <tr><td>&mdash;</td><td><code>&amp;mdash;</code></td><td><code>&amp;#8212;</code></td><td>Em dash</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Email Capture -->
+    <div class="tools-container">
+        <div class="email-capture">
+            <div class="email-capture-text">
+                <strong>Get developer tips weekly</strong>
+                <span>Join 500+ devs who get our best tool tips and tricks.</span>
+            </div>
+            <div class="email-capture-form" id="email-form">
+                <input type="email" id="email-input" placeholder="you@example.com" class="email-input">
+                <button class="btn email-btn" onclick="subscribeEmail()">Subscribe</button>
+            </div>
+            <div id="email-success" style="display:none;color:var(--success);font-weight:600">Thanks for subscribing!</div>
+        </div>
+    </div>
+
+    <!-- Ad: Middle -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Related Tools -->
+    <section class="tools-container">
+        <h2>Related Tools</h2>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h3>URL Encoder/Decoder</h3>
+                <p>Encode or decode URL components.</p>
+                <a href="url-encoder.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>Markdown to HTML</h3>
+                <p>Convert Markdown to clean HTML instantly.</p>
+                <a href="markdown-to-html.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>Base64 Encoder</h3>
+                <p>Encode or decode Base64 strings.</p>
+                <a href="base64.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Affiliate Tools -->
+    <section class="tools-container">
+        <h2>Recommended Tools</h2>
+        <div class="affiliate-cards">
+            <a href="https://vercel.com" rel="nofollow sponsored" target="_blank" class="affiliate-card">
+                <span class="affiliate-label">Recommended</span>
+                <strong>Deploy with Vercel</strong>
+                <span class="affiliate-desc">Free hosting for frontend projects</span>
+            </a>
+            <a href="https://postman.com" rel="nofollow sponsored" target="_blank" class="affiliate-card">
+                <span class="affiliate-label">Recommended</span>
+                <strong>API testing with Postman</strong>
+                <span class="affiliate-desc">Free API development platform</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="tools-container">
+        <h2>Frequently Asked Questions</h2>
+        <div style="max-width:800px">
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What are HTML entities?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">HTML entities are special codes used to represent characters that have special meaning in HTML, like &lt; (less than), &gt; (greater than), &amp; (ampersand), and &quot; (quotation mark). They start with &amp; and end with ;.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">Why do I need to encode HTML entities?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Encoding HTML entities prevents browsers from interpreting special characters as HTML markup. This is essential for security (preventing XSS attacks) and for displaying code snippets on web pages.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What characters are encoded?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">The most important characters to encode are &amp; (&amp;amp;), &lt; (&amp;lt;), &gt; (&amp;gt;), &quot; (&amp;quot;), and ' (&amp;#39;). This tool also encodes other special characters into their numeric HTML entity equivalents.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Ad: Bottom -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <footer>
+        <p>ToolboxKit — Free online tools. All processing happens in your browser. No data is sent to any server.</p>
+        <p><a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a></p>
+    </footer>
+
+    <script>
+    function escHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+    function copyText(id) {
+        const text = document.getElementById(id).textContent;
+        navigator.clipboard.writeText(text).then(() => {
+            const btn = event.target;
+            const orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = orig, 1500);
+        });
+    }
+    function subscribeEmail() {
+        const email = document.getElementById('email-input').value;
+        if (!email || !email.includes('@')) { alert('Please enter a valid email.'); return; }
+        let subs = JSON.parse(localStorage.getItem('toolboxkit_subscribers') || '[]');
+        if (!subs.includes(email)) subs.push(email);
+        localStorage.setItem('toolboxkit_subscribers', JSON.stringify(subs));
+        document.getElementById('email-form').style.display = 'none';
+        document.getElementById('email-success').style.display = 'block';
+    }
+
+    function encodeEntities() {
+        const input = document.getElementById('he-input').value;
+        let result = '';
+        for (let i = 0; i < input.length; i++) {
+            const c = input[i];
+            const code = input.charCodeAt(i);
+            if (c === '&') result += '&amp;';
+            else if (c === '<') result += '&lt;';
+            else if (c === '>') result += '&gt;';
+            else if (c === '"') result += '&quot;';
+            else if (c === "'") result += '&#39;';
+            else if (code > 127) result += '&#' + code + ';';
+            else result += c;
+        }
+        document.getElementById('he-output').textContent = result;
+    }
+
+    function decodeEntities() {
+        const input = document.getElementById('he-input').value;
+        const textarea = document.createElement('textarea');
+        textarea.innerHTML = input;
+        document.getElementById('he-output').textContent = textarea.value;
+    }
+    </script>
+</body>
+</html>
