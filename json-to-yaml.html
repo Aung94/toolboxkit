@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON to YAML Converter Online - Free JSON YAML Tool | ToolboxKit</title>
+    <meta name="description" content="Convert JSON to YAML and YAML to JSON instantly online. Free bi-directional converter for developers. No signup required, runs in your browser.">
+    <meta name="keywords" content="json to yaml, yaml to json, json yaml converter, convert json to yaml online, yaml converter, json to yml, yml to json, free yaml tool">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://toolboxkit.netlify.app/json-to-yaml.html">
+    <meta property="og:title" content="JSON to YAML Converter Online - Free JSON YAML Tool">
+    <meta property="og:description" content="Convert between JSON and YAML formats instantly. Free bi-directional converter for developers.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolboxkit.netlify.app/json-to-yaml.html">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    .affiliate-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:1rem}
+    .affiliate-card{display:block;padding:1rem 1.25rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);text-decoration:none;color:inherit;transition:border-color .2s,box-shadow .2s}
+    .affiliate-card:hover{border-color:var(--primary);box-shadow:0 2px 8px rgba(99,102,241,.12)}
+    .affiliate-label{display:inline-block;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:var(--primary);margin-bottom:.25rem}
+    .affiliate-card strong{display:block;font-size:.95rem;margin-bottom:.2rem}
+    .affiliate-desc{font-size:.82rem;color:var(--text-muted)}
+    .email-capture{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:1rem}
+    .email-capture-text{flex:1;min-width:200px}
+    .email-capture-text strong{display:block;font-size:1rem;margin-bottom:.15rem}
+    .email-capture-text span{font-size:.85rem;color:var(--text-muted)}
+    .email-capture-form{display:flex;gap:.5rem;flex:1;min-width:250px}
+    .email-input{flex:1;padding:.5rem .75rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--bg);color:var(--text);font-size:.9rem}
+    .email-btn{white-space:nowrap}
+    .split-pane{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    @media(max-width:768px){.split-pane{grid-template-columns:1fr}}
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2850355877461307" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "JSON to YAML Converter Online",
+        "url": "https://toolboxkit.netlify.app/json-to-yaml.html",
+        "description": "Convert between JSON and YAML formats instantly. Free bi-directional converter for developers.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the difference between JSON and YAML?",
+                "acceptedAnswer": { "@type": "Answer", "text": "JSON (JavaScript Object Notation) uses braces, brackets, and quotes for structure. YAML (YAML Ain't Markup Language) uses indentation instead, making it more human-readable. YAML also supports comments, while JSON does not." }
+            },
+            {
+                "@type": "Question",
+                "name": "When should I use YAML instead of JSON?",
+                "acceptedAnswer": { "@type": "Answer", "text": "YAML is commonly used for configuration files (Docker Compose, Kubernetes, GitHub Actions, Ansible) because of its readability. JSON is preferred for data exchange between systems, APIs, and when exact parsing is critical." }
+            },
+            {
+                "@type": "Question",
+                "name": "Does this tool support YAML to JSON conversion too?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. This is a bi-directional converter. Paste JSON on the left and click 'JSON to YAML', or paste YAML on the right and click 'YAML to JSON'." }
+            },
+            {
+                "@type": "Question",
+                "name": "Does this YAML converter support comments?",
+                "acceptedAnswer": { "@type": "Answer", "text": "The YAML to JSON direction strips comments since JSON does not support them. The JSON to YAML direction produces clean YAML without comments." }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo">🧰 ToolboxKit</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#dev-tools">Developer Tools</a>
+            <a href="/#convert-tools">Converters</a>
+            <a href="/#gen-tools">Generators</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="padding-bottom:1rem">
+        <h1>JSON to YAML Converter</h1>
+        <p>Convert between JSON and YAML formats instantly. Bi-directional, free, and runs entirely in your browser.</p>
+    </header>
+
+    <!-- Ad: Top -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <main class="tools-container">
+        <div class="tool-area">
+            <div class="split-pane">
+                <div>
+                    <label>JSON:</label>
+                    <textarea id="json-input" rows="14" placeholder='{
+  "name": "John Doe",
+  "age": 30,
+  "skills": ["JavaScript", "Python"],
+  "address": {
+    "city": "New York",
+    "zip": "10001"
+  }
+}'></textarea>
+                </div>
+                <div>
+                    <label>YAML:</label>
+                    <textarea id="yaml-output" rows="14" placeholder="name: John Doe
+age: 30
+skills:
+  - JavaScript
+  - Python
+address:
+  city: New York
+  zip: '10001'"></textarea>
+                </div>
+            </div>
+            <div class="btn-group" style="margin-top:1rem">
+                <button class="btn" onclick="jsonToYaml()">JSON → YAML</button>
+                <button class="btn" onclick="yamlToJson()">YAML → JSON</button>
+                <button class="copy-btn" onclick="copyYaml()">Copy YAML</button>
+                <button class="copy-btn" onclick="copyJson()">Copy JSON</button>
+            </div>
+            <div id="jy-status" style="margin:0.5rem 0;font-size:0.9rem"></div>
+        </div>
+    </main>
+
+    <!-- Email Capture -->
+    <div class="tools-container">
+        <div class="email-capture">
+            <div class="email-capture-text">
+                <strong>Get developer tips weekly</strong>
+                <span>Join 500+ devs who get our best tool tips and tricks.</span>
+            </div>
+            <div class="email-capture-form" id="email-form">
+                <input type="email" id="email-input" placeholder="you@example.com" class="email-input">
+                <button class="btn email-btn" onclick="subscribeEmail()">Subscribe</button>
+            </div>
+            <div id="email-success" style="display:none;color:var(--success);font-weight:600">Thanks for subscribing!</div>
+        </div>
+    </div>
+
+    <!-- Ad: Middle -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Related Tools -->
+    <section class="tools-container">
+        <h2>Related Tools</h2>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h3>JSON Formatter</h3>
+                <p>Format, beautify, and validate JSON data.</p>
+                <a href="json-formatter.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>JSON to CSV</h3>
+                <p>Convert JSON arrays to CSV format.</p>
+                <a href="json-to-csv.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>Base64 Encoder</h3>
+                <p>Encode or decode Base64 strings.</p>
+                <a href="base64.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Affiliate Tools -->
+    <section class="tools-container">
+        <h2>Recommended Tools</h2>
+        <div class="affiliate-cards">
+            <a href="https://vercel.com" rel="nofollow sponsored" target="_blank" class="affiliate-card">
+                <span class="affiliate-label">Recommended</span>
+                <strong>Deploy with Vercel</strong>
+                <span class="affiliate-desc">Free hosting for frontend projects</span>
+            </a>
+            <a href="https://postman.com" rel="nofollow sponsored" target="_blank" class="affiliate-card">
+                <span class="affiliate-label">Recommended</span>
+                <strong>API testing with Postman</strong>
+                <span class="affiliate-desc">Free API development platform</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="tools-container">
+        <h2>Frequently Asked Questions</h2>
+        <div style="max-width:800px">
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What is the difference between JSON and YAML?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">JSON uses braces, brackets, and quotes for structure. YAML uses indentation instead, making it more human-readable. YAML also supports comments, while JSON does not.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">When should I use YAML instead of JSON?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">YAML is commonly used for configuration files (Docker Compose, Kubernetes, GitHub Actions, Ansible) because of its readability. JSON is preferred for data exchange between systems and APIs.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">Does this tool support YAML to JSON conversion too?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Yes. This is a bi-directional converter. Paste JSON on the left and click "JSON to YAML", or paste YAML on the right and click "YAML to JSON".</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">Does this YAML converter support comments?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">The YAML to JSON direction strips comments since JSON does not support them. The JSON to YAML direction produces clean YAML without comments.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Ad: Bottom -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <footer>
+        <p>ToolboxKit — Free online tools. All processing happens in your browser. No data is sent to any server.</p>
+        <p><a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a></p>
+    </footer>
+
+    <script>
+    function escHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+    function copyText(id) {
+        const text = document.getElementById(id).textContent;
+        navigator.clipboard.writeText(text).then(() => {
+            const btn = event.target;
+            const orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = orig, 1500);
+        });
+    }
+    function subscribeEmail() {
+        const email = document.getElementById('email-input').value;
+        if (!email || !email.includes('@')) { alert('Please enter a valid email.'); return; }
+        let subs = JSON.parse(localStorage.getItem('toolboxkit_subscribers') || '[]');
+        if (!subs.includes(email)) subs.push(email);
+        localStorage.setItem('toolboxkit_subscribers', JSON.stringify(subs));
+        document.getElementById('email-form').style.display = 'none';
+        document.getElementById('email-success').style.display = 'block';
+    }
+
+    // Simple JSON to YAML converter
+    function toYaml(obj, indent) {
+        indent = indent || 0;
+        var pad = '  '.repeat(indent);
+        var lines = [];
+
+        if (Array.isArray(obj)) {
+            if (obj.length === 0) return '[]';
+            obj.forEach(function(item) {
+                if (typeof item === 'object' && item !== null) {
+                    var inner = toYaml(item, indent + 1);
+                    var innerLines = inner.split('\n');
+                    lines.push(pad + '- ' + innerLines[0].trim());
+                    for (var i = 1; i < innerLines.length; i++) {
+                        lines.push(pad + '  ' + innerLines[i].trim());
+                    }
+                } else {
+                    lines.push(pad + '- ' + formatScalar(item));
+                }
+            });
+        } else if (typeof obj === 'object' && obj !== null) {
+            var keys = Object.keys(obj);
+            if (keys.length === 0) return '{}';
+            keys.forEach(function(key) {
+                var val = obj[key];
+                if (typeof val === 'object' && val !== null) {
+                    lines.push(pad + key + ':');
+                    lines.push(toYaml(val, indent + 1));
+                } else {
+                    lines.push(pad + key + ': ' + formatScalar(val));
+                }
+            });
+        } else {
+            return pad + formatScalar(obj);
+        }
+        return lines.join('\n');
+    }
+
+    function formatScalar(val) {
+        if (val === null) return 'null';
+        if (val === true) return 'true';
+        if (val === false) return 'false';
+        if (typeof val === 'number') return String(val);
+        if (typeof val === 'string') {
+            if (val === '' || val === 'true' || val === 'false' || val === 'null' || val === 'yes' || val === 'no' ||
+                /^\d/.test(val) || /[:{}\[\],&*?|>!%#@`]/.test(val) || val.indexOf("'") !== -1) {
+                return "'" + val.replace(/'/g, "''") + "'";
+            }
+            return val;
+        }
+        return String(val);
+    }
+
+    // Simple YAML to JSON parser (handles common cases)
+    function parseYaml(yamlStr) {
+        // Remove comments
+        var lines = yamlStr.split('\n').map(function(line) {
+            // Don't remove # inside quotes
+            var inStr = false;
+            var quote = '';
+            for (var i = 0; i < line.length; i++) {
+                if (!inStr && (line[i] === "'" || line[i] === '"')) { inStr = true; quote = line[i]; }
+                else if (inStr && line[i] === quote) inStr = false;
+                else if (!inStr && line[i] === '#') return line.substring(0, i);
+            }
+            return line;
+        });
+        yamlStr = lines.join('\n');
+
+        // Try to handle basic YAML by converting to JSON-like
+        try {
+            return parseYamlBlock(lines, 0).value;
+        } catch(e) {
+            throw new Error('YAML parsing error: ' + e.message);
+        }
+    }
+
+    function parseYamlBlock(lines, startIndent) {
+        var result = null;
+        var isArray = false;
+        var i = 0;
+
+        while (i < lines.length) {
+            var line = lines[i];
+            if (line.trim() === '' || line.trim().charAt(0) === '#') { i++; continue; }
+
+            var indent = line.search(/\S/);
+            if (indent < startIndent) break;
+
+            var trimmed = line.trim();
+
+            // Array item
+            if (trimmed.charAt(0) === '-') {
+                if (result === null) { result = []; isArray = true; }
+                var val = trimmed.substring(1).trim();
+                if (val === '' || (val.indexOf(':') !== -1 && !isQuoted(val))) {
+                    // Nested object or multiline
+                    var subLines = [];
+                    if (val && val.indexOf(':') !== -1) {
+                        subLines.push('  '.repeat(indent + 1) + val);
+                    }
+                    i++;
+                    while (i < lines.length && (lines[i].trim() === '' || lines[i].search(/\S/) > indent)) {
+                        subLines.push(lines[i]); i++;
+                    }
+                    if (subLines.length) {
+                        var sub = parseYamlBlock(subLines, indent + 1);
+                        result.push(sub.value);
+                    } else {
+                        result.push(null);
+                    }
+                } else {
+                    result.push(parseScalar(val));
+                    i++;
+                }
+            }
+            // Key: value
+            else if (trimmed.indexOf(':') !== -1) {
+                if (result === null) result = {};
+                var colonPos = trimmed.indexOf(':');
+                var key = trimmed.substring(0, colonPos).trim();
+                var val = trimmed.substring(colonPos + 1).trim();
+
+                if (val === '' || val === '|' || val === '>') {
+                    // Nested block
+                    var subLines = [];
+                    i++;
+                    while (i < lines.length && (lines[i].trim() === '' || lines[i].search(/\S/) > indent)) {
+                        subLines.push(lines[i]); i++;
+                    }
+                    if (subLines.length) {
+                        var sub = parseYamlBlock(subLines, indent + 2);
+                        result[key] = sub.value;
+                    } else {
+                        result[key] = null;
+                    }
+                } else if (val === '[]') {
+                    result[key] = []; i++;
+                } else if (val === '{}') {
+                    result[key] = {}; i++;
+                } else {
+                    result[key] = parseScalar(val);
+                    i++;
+                }
+            } else {
+                i++;
+            }
+        }
+        return { value: result, nextLine: i };
+    }
+
+    function isQuoted(str) {
+        return (str.charAt(0) === "'" && str.charAt(str.length-1) === "'") || (str.charAt(0) === '"' && str.charAt(str.length-1) === '"');
+    }
+
+    function parseScalar(val) {
+        if (val === 'null' || val === '~') return null;
+        if (val === 'true' || val === 'yes') return true;
+        if (val === 'false' || val === 'no') return false;
+        if (/^-?\d+$/.test(val)) return parseInt(val, 10);
+        if (/^-?\d+\.\d+$/.test(val)) return parseFloat(val);
+        if ((val.charAt(0) === "'" && val.charAt(val.length-1) === "'") || (val.charAt(0) === '"' && val.charAt(val.length-1) === '"')) {
+            return val.substring(1, val.length - 1);
+        }
+        return val;
+    }
+
+    function jsonToYaml() {
+        var status = document.getElementById('jy-status');
+        try {
+            var json = JSON.parse(document.getElementById('json-input').value);
+            var yaml = toYaml(json, 0);
+            document.getElementById('yaml-output').value = yaml;
+            status.innerHTML = '<span style="color:var(--success)">Converted JSON to YAML successfully</span>';
+        } catch (e) {
+            status.innerHTML = '<span style="color:var(--danger)">Invalid JSON: ' + escHtml(e.message) + '</span>';
+        }
+    }
+
+    function yamlToJson() {
+        var status = document.getElementById('jy-status');
+        try {
+            var yamlStr = document.getElementById('yaml-output').value;
+            var obj = parseYaml(yamlStr);
+            document.getElementById('json-input').value = JSON.stringify(obj, null, 2);
+            status.innerHTML = '<span style="color:var(--success)">Converted YAML to JSON successfully</span>';
+        } catch (e) {
+            status.innerHTML = '<span style="color:var(--danger)">YAML Error: ' + escHtml(e.message) + '</span>';
+        }
+    }
+
+    function copyYaml() {
+        navigator.clipboard.writeText(document.getElementById('yaml-output').value).then(function() {
+            var btn = event.target; var orig = btn.textContent;
+            btn.textContent = 'Copied!'; setTimeout(function() { btn.textContent = orig; }, 1500);
+        });
+    }
+    function copyJson() {
+        navigator.clipboard.writeText(document.getElementById('json-input').value).then(function() {
+            var btn = event.target; var orig = btn.textContent;
+            btn.textContent = 'Copied!'; setTimeout(function() { btn.textContent = orig; }, 1500);
+        });
+    }
+    </script>
+</body>
+</html>

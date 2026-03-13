@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Slug Generator Online - Free SEO Slug Maker | ToolboxKit</title>
+    <meta name="description" content="Generate clean, URL-friendly slugs from any text. Customize separator, case, and special character handling. Real-time conversion for SEO-optimized URLs.">
+    <meta name="keywords" content="slug generator, url slug generator, seo slug maker, url friendly text, slug converter, generate slug online, permalink generator, url slug tool">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://toolboxkit.netlify.app/slug-generator.html">
+    <meta property="og:title" content="URL Slug Generator Online - Free SEO Slug Maker">
+    <meta property="og:description" content="Generate clean, URL-friendly slugs from any text instantly. Customize separator, case, and special chars.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolboxkit.netlify.app/slug-generator.html">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    .affiliate-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:1rem}
+    .affiliate-card{display:block;padding:1rem 1.25rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);text-decoration:none;color:inherit;transition:border-color .2s,box-shadow .2s}
+    .affiliate-card:hover{border-color:var(--primary);box-shadow:0 2px 8px rgba(99,102,241,.12)}
+    .affiliate-label{display:inline-block;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:var(--primary);margin-bottom:.25rem}
+    .affiliate-card strong{display:block;font-size:.95rem;margin-bottom:.2rem}
+    .affiliate-desc{font-size:.82rem;color:var(--text-muted)}
+    .email-capture{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:1rem}
+    .email-capture-text{flex:1;min-width:200px}
+    .email-capture-text strong{display:block;font-size:1rem;margin-bottom:.15rem}
+    .email-capture-text span{font-size:.85rem;color:var(--text-muted)}
+    .email-capture-form{display:flex;gap:.5rem;flex:1;min-width:250px}
+    .email-input{flex:1;padding:.5rem .75rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--bg);color:var(--text);font-size:.9rem}
+    .email-btn{white-space:nowrap}
+    .options-row{display:flex;flex-wrap:wrap;gap:1.25rem;align-items:center;margin:.75rem 0}
+    .options-row label{font-size:.85rem;display:flex;align-items:center;gap:.35rem}
+    .options-row select{padding:.35rem .5rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);color:var(--text);font-size:.85rem}
+    .slug-output{font-size:1.2rem;font-family:monospace;padding:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);margin-top:.75rem;word-break:break-all;min-height:2rem}
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2850355877461307" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "URL Slug Generator Online",
+        "url": "https://toolboxkit.netlify.app/slug-generator.html",
+        "description": "Generate clean, URL-friendly slugs from any text. Customize separator, case, and special character handling.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is a URL slug?",
+                "acceptedAnswer": { "@type": "Answer", "text": "A URL slug is the part of a web address that identifies a page in a human-readable form. For example, in 'example.com/my-blog-post', 'my-blog-post' is the slug. Good slugs are lowercase, use hyphens, and contain relevant keywords." }
+            },
+            {
+                "@type": "Question",
+                "name": "Why are slugs important for SEO?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Search engines use URLs to understand page content. Clean, descriptive slugs with relevant keywords can improve click-through rates from search results and help search engines index your pages correctly." }
+            },
+            {
+                "@type": "Question",
+                "name": "Should I use hyphens or underscores in slugs?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Google recommends using hyphens (-) rather than underscores (_) in URLs. Hyphens are treated as word separators, while underscores are not, which means 'my-blog-post' is better than 'my_blog_post' for SEO." }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo">🧰 ToolboxKit</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#dev-tools">Developer Tools</a>
+            <a href="/#convert-tools">Converters</a>
+            <a href="/#gen-tools">Generators</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="padding-bottom:1rem">
+        <h1>URL Slug Generator</h1>
+        <p>Convert any text into a clean, URL-friendly slug. Customize separator, case, and special character handling. Real-time conversion.</p>
+    </header>
+
+    <!-- Ad: Top -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <main class="tools-container">
+        <div class="tool-area">
+            <label>Enter Text:</label>
+            <textarea id="slug-input" rows="3" placeholder="How to Build a Website in 2024 — A Complete Guide!"></textarea>
+
+            <div class="options-row">
+                <label>Separator:
+                    <select id="slug-sep" onchange="generateSlug()">
+                        <option value="-">Hyphen (-)</option>
+                        <option value="_">Underscore (_)</option>
+                    </select>
+                </label>
+                <label><input type="checkbox" id="slug-lower" checked onchange="generateSlug()"> Lowercase</label>
+                <label><input type="checkbox" id="slug-trim" checked onchange="generateSlug()"> Trim trailing separator</label>
+                <label>Max length:
+                    <select id="slug-max" onchange="generateSlug()">
+                        <option value="0">No limit</option>
+                        <option value="50">50 chars</option>
+                        <option value="75">75 chars</option>
+                        <option value="100">100 chars</option>
+                    </select>
+                </label>
+            </div>
+
+            <label>Generated Slug:</label>
+            <div class="slug-output" id="slug-output"></div>
+
+            <div class="btn-group" style="margin-top:.75rem">
+                <button class="copy-btn" onclick="copyText('slug-output')">Copy Slug</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Email Capture -->
+    <div class="tools-container">
+        <div class="email-capture">
+            <div class="email-capture-text">
+                <strong>Get developer tips weekly</strong>
+                <span>Join 500+ devs who get our best tool tips and tricks.</span>
+            </div>
+            <div class="email-capture-form" id="email-form">
+                <input type="email" id="email-input" placeholder="you@example.com" class="email-input">
+                <button class="btn email-btn" onclick="subscribeEmail()">Subscribe</button>
+            </div>
+            <div id="email-success" style="display:none;color:var(--success);font-weight:600">Thanks for subscribing!</div>
+        </div>
+    </div>
+
+    <!-- Ad: Middle -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Related Tools -->
+    <section class="tools-container">
+        <h2>Related Tools</h2>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h3>URL Encoder/Decoder</h3>
+                <p>Encode or decode URL components.</p>
+                <a href="url-encoder.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>Case Converter</h3>
+                <p>Convert text between different cases.</p>
+                <a href="case-converter.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>Character Counter</h3>
+                <p>Count characters with social media limits.</p>
+                <a href="character-counter.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Affiliate Tools -->
+    <section class="tools-container">
+        <h2>Recommended Tools</h2>
+        <div class="affiliate-cards">
+            <a href="https://vercel.com" rel="nofollow sponsored" target="_blank" class="affiliate-card">
+                <span class="affiliate-label">Recommended</span>
+                <strong>Deploy with Vercel</strong>
+                <span class="affiliate-desc">Free hosting for frontend projects</span>
+            </a>
+            <a href="https://notion.so" rel="nofollow sponsored" target="_blank" class="affiliate-card">
+                <span class="affiliate-label">Recommended</span>
+                <strong>Organize with Notion</strong>
+                <span class="affiliate-desc">All-in-one workspace for notes and docs</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="tools-container">
+        <h2>Frequently Asked Questions</h2>
+        <div style="max-width:800px">
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What is a URL slug?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">A URL slug is the part of a web address that identifies a page in a human-readable form. For example, in "example.com/my-blog-post", "my-blog-post" is the slug. Good slugs are lowercase, use hyphens, and contain relevant keywords.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">Why are slugs important for SEO?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Search engines use URLs to understand page content. Clean, descriptive slugs with relevant keywords can improve click-through rates from search results and help search engines index your pages correctly.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">Should I use hyphens or underscores in slugs?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Google recommends using hyphens (-) rather than underscores (_) in URLs. Hyphens are treated as word separators, while underscores are not, which means "my-blog-post" is better than "my_blog_post" for SEO.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Ad: Bottom -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <footer>
+        <p>ToolboxKit — Free online tools. All processing happens in your browser. No data is sent to any server.</p>
+        <p><a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a></p>
+    </footer>
+
+    <script>
+    function escHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+    function copyText(id) {
+        const text = document.getElementById(id).textContent;
+        navigator.clipboard.writeText(text).then(() => {
+            const btn = event.target;
+            const orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = orig, 1500);
+        });
+    }
+    function subscribeEmail() {
+        const email = document.getElementById('email-input').value;
+        if (!email || !email.includes('@')) { alert('Please enter a valid email.'); return; }
+        let subs = JSON.parse(localStorage.getItem('toolboxkit_subscribers') || '[]');
+        if (!subs.includes(email)) subs.push(email);
+        localStorage.setItem('toolboxkit_subscribers', JSON.stringify(subs));
+        document.getElementById('email-form').style.display = 'none';
+        document.getElementById('email-success').style.display = 'block';
+    }
+
+    function generateSlug() {
+        let text = document.getElementById('slug-input').value;
+        const sep = document.getElementById('slug-sep').value;
+        const lower = document.getElementById('slug-lower').checked;
+        const trim = document.getElementById('slug-trim').checked;
+        const maxLen = parseInt(document.getElementById('slug-max').value);
+
+        // Normalize unicode
+        let slug = text.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        if (lower) slug = slug.toLowerCase();
+        // Replace non-alphanumeric with separator
+        slug = slug.replace(/[^a-zA-Z0-9]+/g, sep);
+        // Remove leading/trailing separators
+        if (trim) {
+            const re = new RegExp('^[' + sep.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&') + ']+|[' + sep.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&') + ']+$', 'g');
+            slug = slug.replace(re, '');
+        }
+        // Collapse multiple separators
+        slug = slug.replace(new RegExp('[' + sep.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&') + ']{2,}', 'g'), sep);
+        // Max length (break at separator boundary)
+        if (maxLen > 0 && slug.length > maxLen) {
+            slug = slug.substring(0, maxLen);
+            const lastSep = slug.lastIndexOf(sep);
+            if (lastSep > maxLen * 0.5) slug = slug.substring(0, lastSep);
+        }
+        document.getElementById('slug-output').textContent = slug;
+    }
+
+    document.getElementById('slug-input').addEventListener('input', generateSlug);
+    </script>
+</body>
+</html>

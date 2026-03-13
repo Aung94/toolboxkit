@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PX to REM Converter Online - Free Pixel to REM Tool | ToolboxKit</title>
+    <meta name="description" content="Convert pixels (px) to rem units and rem to px instantly. Adjustable base font size. Includes common conversion table. Free online CSS unit converter.">
+    <meta name="keywords" content="px to rem, rem to px, pixel to rem converter, css unit converter, rem calculator, px rem conversion, css font size converter, responsive design converter">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://toolboxkit.netlify.app/pixel-to-rem.html">
+    <meta property="og:title" content="PX to REM Converter Online - Free Pixel to REM Tool">
+    <meta property="og:description" content="Convert pixels to rem and rem to px instantly. Adjustable base font size with common conversion table.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolboxkit.netlify.app/pixel-to-rem.html">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    .affiliate-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:1rem}
+    .affiliate-card{display:block;padding:1rem 1.25rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);text-decoration:none;color:inherit;transition:border-color .2s,box-shadow .2s}
+    .affiliate-card:hover{border-color:var(--primary);box-shadow:0 2px 8px rgba(99,102,241,.12)}
+    .affiliate-label{display:inline-block;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:var(--primary);margin-bottom:.25rem}
+    .affiliate-card strong{display:block;font-size:.95rem;margin-bottom:.2rem}
+    .affiliate-desc{font-size:.82rem;color:var(--text-muted)}
+    .email-capture{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:1rem}
+    .email-capture-text{flex:1;min-width:200px}
+    .email-capture-text strong{display:block;font-size:1rem;margin-bottom:.15rem}
+    .email-capture-text span{font-size:.85rem;color:var(--text-muted)}
+    .email-capture-form{display:flex;gap:.5rem;flex:1;min-width:250px}
+    .email-input{flex:1;padding:.5rem .75rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--bg);color:var(--text);font-size:.9rem}
+    .email-btn{white-space:nowrap}
+    .converter-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:end;margin:1rem 0}
+    @media(max-width:600px){.converter-grid{grid-template-columns:1fr;text-align:center}}
+    .converter-grid label{display:block;font-size:.85rem;margin-bottom:.3rem}
+    .converter-grid input{width:100%;padding:.6rem .75rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);color:var(--text);font-size:1.25rem;text-align:center}
+    .converter-arrow{font-size:1.5rem;text-align:center;padding-bottom:.3rem}
+    .base-control{display:flex;align-items:center;gap:.75rem;margin:1rem 0;padding:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius)}
+    .base-control label{font-size:.9rem;white-space:nowrap}
+    .base-control input{width:80px;padding:.4rem .5rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--bg);color:var(--text);font-size:.9rem;text-align:center}
+    .conv-table{width:100%;border-collapse:collapse;margin-top:1rem;font-size:.85rem}
+    .conv-table th,.conv-table td{border:1px solid var(--border);padding:.5rem .75rem;text-align:center}
+    .conv-table th{background:var(--surface);font-weight:600}
+    .conv-table tr:hover{background:var(--surface)}
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2850355877461307" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "PX to REM Converter Online",
+        "url": "https://toolboxkit.netlify.app/pixel-to-rem.html",
+        "description": "Convert pixels (px) to rem units and rem to px instantly. Adjustable base font size with common conversion table.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the difference between px and rem?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Pixels (px) are absolute units that are fixed in size. Rem (root em) is a relative unit based on the root element's font size (usually 16px). Using rem makes your design more accessible and responsive, as it scales when users change their browser font size." }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the default base font size?",
+                "acceptedAnswer": { "@type": "Answer", "text": "The default base font size in all browsers is 16px. This means 1rem = 16px by default. You can change the base by setting font-size on the html element (e.g., html { font-size: 62.5%; } makes 1rem = 10px)." }
+            },
+            {
+                "@type": "Question",
+                "name": "Why should I use rem instead of px?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Using rem units makes your website more accessible. When users increase their browser's default font size for readability, rem-based layouts scale proportionally. Pixel-based layouts do not respect these user preferences." }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I convert px to rem?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Divide the pixel value by the base font size. For example, with a 16px base: 24px / 16 = 1.5rem. With a 10px base (62.5%): 24px / 10 = 2.4rem." }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo">🧰 ToolboxKit</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#dev-tools">Developer Tools</a>
+            <a href="/#convert-tools">Converters</a>
+            <a href="/#gen-tools">Generators</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="padding-bottom:1rem">
+        <h1>PX to REM Converter</h1>
+        <p>Convert pixels to rem and rem to pixels instantly. Adjustable base font size with a handy conversion reference table.</p>
+    </header>
+
+    <!-- Ad: Top -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <main class="tools-container">
+        <div class="tool-area">
+            <div class="base-control">
+                <label>Base font size:</label>
+                <input type="number" id="base-size" value="16" min="1" max="100" onchange="convert('px')">
+                <span>px</span>
+                <span style="color:var(--text-muted);font-size:.85rem;margin-left:.5rem">(default: 16px)</span>
+            </div>
+
+            <div class="converter-grid">
+                <div>
+                    <label>Pixels (px):</label>
+                    <input type="number" id="px-input" value="16" step="any" oninput="convert('px')">
+                </div>
+                <div class="converter-arrow">⇄</div>
+                <div>
+                    <label>REM:</label>
+                    <input type="number" id="rem-input" value="1" step="any" oninput="convert('rem')">
+                </div>
+            </div>
+
+            <div class="btn-group" style="margin-top:.75rem">
+                <button class="copy-btn" onclick="copyResult('px')">Copy PX</button>
+                <button class="copy-btn" onclick="copyResult('rem')">Copy REM</button>
+            </div>
+
+            <h3 style="margin-top:2rem">Common Conversions</h3>
+            <table class="conv-table" id="conv-table">
+                <thead><tr><th>Pixels</th><th>REM</th></tr></thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Email Capture -->
+    <div class="tools-container">
+        <div class="email-capture">
+            <div class="email-capture-text">
+                <strong>Get developer tips weekly</strong>
+                <span>Join 500+ devs who get our best tool tips and tricks.</span>
+            </div>
+            <div class="email-capture-form" id="email-form">
+                <input type="email" id="email-input" placeholder="you@example.com" class="email-input">
+                <button class="btn email-btn" onclick="subscribeEmail()">Subscribe</button>
+            </div>
+            <div id="email-success" style="display:none;color:var(--success);font-weight:600">Thanks for subscribing!</div>
+        </div>
+    </div>
+
+    <!-- Ad: Middle -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Related Tools -->
+    <section class="tools-container">
+        <h2>Related Tools</h2>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h3>CSS Gradient Generator</h3>
+                <p>Create beautiful CSS gradients visually.</p>
+                <a href="css-gradient-generator.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>Color Converter</h3>
+                <p>Convert between HEX, RGB, HSL color formats.</p>
+                <a href="color-converter.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>HTML Entity Encoder</h3>
+                <p>Encode and decode HTML entities.</p>
+                <a href="html-entity-encoder.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Affiliate Tools -->
+    <section class="tools-container">
+        <h2>Recommended Tools</h2>
+        <div class="affiliate-cards">
+            <a href="https://vercel.com" rel="nofollow sponsored" target="_blank" class="affiliate-card">
+                <span class="affiliate-label">Recommended</span>
+                <strong>Deploy with Vercel</strong>
+                <span class="affiliate-desc">Free hosting for frontend projects</span>
+            </a>
+            <a href="https://figma.com" rel="nofollow sponsored" target="_blank" class="affiliate-card">
+                <span class="affiliate-label">Recommended</span>
+                <strong>Design with Figma</strong>
+                <span class="affiliate-desc">Free collaborative design tool</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="tools-container">
+        <h2>Frequently Asked Questions</h2>
+        <div style="max-width:800px">
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What is the difference between px and rem?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Pixels (px) are absolute units that are fixed in size. Rem (root em) is a relative unit based on the root element's font size (usually 16px). Using rem makes your design more accessible and responsive.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What is the default base font size?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">The default base font size in all browsers is 16px. This means 1rem = 16px by default. You can change the base by setting font-size on the html element.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">Why should I use rem instead of px?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Using rem units makes your website more accessible. When users increase their browser's default font size for readability, rem-based layouts scale proportionally.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">How do I convert px to rem?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Divide the pixel value by the base font size. For example, with a 16px base: 24px / 16 = 1.5rem. With a 10px base (62.5%): 24px / 10 = 2.4rem.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Ad: Bottom -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <footer>
+        <p>ToolboxKit — Free online tools. All processing happens in your browser. No data is sent to any server.</p>
+        <p><a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a></p>
+    </footer>
+
+    <script>
+    function escHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+    function copyText(id) {
+        const text = document.getElementById(id).textContent;
+        navigator.clipboard.writeText(text).then(() => {
+            const btn = event.target;
+            const orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = orig, 1500);
+        });
+    }
+    function subscribeEmail() {
+        const email = document.getElementById('email-input').value;
+        if (!email || !email.includes('@')) { alert('Please enter a valid email.'); return; }
+        let subs = JSON.parse(localStorage.getItem('toolboxkit_subscribers') || '[]');
+        if (!subs.includes(email)) subs.push(email);
+        localStorage.setItem('toolboxkit_subscribers', JSON.stringify(subs));
+        document.getElementById('email-form').style.display = 'none';
+        document.getElementById('email-success').style.display = 'block';
+    }
+
+    function convert(from) {
+        var base = parseFloat(document.getElementById('base-size').value) || 16;
+        if (from === 'px') {
+            var px = parseFloat(document.getElementById('px-input').value) || 0;
+            document.getElementById('rem-input').value = parseFloat((px / base).toFixed(6));
+        } else {
+            var rem = parseFloat(document.getElementById('rem-input').value) || 0;
+            document.getElementById('px-input').value = parseFloat((rem * base).toFixed(4));
+        }
+        buildTable();
+    }
+
+    function buildTable() {
+        var base = parseFloat(document.getElementById('base-size').value) || 16;
+        var pxValues = [1, 2, 4, 6, 8, 10, 11, 12, 13, 14, 15, 16, 18, 20, 24, 28, 32, 36, 40, 48, 56, 64, 72, 80, 96];
+        var tbody = document.querySelector('#conv-table tbody');
+        tbody.innerHTML = pxValues.map(function(px) {
+            var rem = parseFloat((px / base).toFixed(6));
+            return '<tr><td>' + px + 'px</td><td>' + rem + 'rem</td></tr>';
+        }).join('');
+    }
+
+    function copyResult(type) {
+        var val;
+        if (type === 'px') val = document.getElementById('px-input').value + 'px';
+        else val = document.getElementById('rem-input').value + 'rem';
+        navigator.clipboard.writeText(val).then(function() {
+            var btn = event.target; var orig = btn.textContent;
+            btn.textContent = 'Copied!'; setTimeout(function() { btn.textContent = orig; }, 1500);
+        });
+    }
+
+    buildTable();
+    </script>
+</body>
+</html>

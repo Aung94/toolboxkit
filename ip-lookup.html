@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Is My IP Address - Free IP Lookup Tool | ToolboxKit</title>
+    <meta name="description" content="Find your public IP address instantly. Free IP lookup tool shows your IPv4/IPv6 address and basic connection info. No signup required.">
+    <meta name="keywords" content="what is my ip, my ip address, ip lookup, find my ip, public ip address, ip checker, ip address tool, show my ip, ip address lookup">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://toolboxkit.netlify.app/ip-lookup.html">
+    <meta property="og:title" content="What Is My IP Address - Free IP Lookup Tool">
+    <meta property="og:description" content="Find your public IP address instantly. Free IP lookup tool with basic connection info.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolboxkit.netlify.app/ip-lookup.html">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    .affiliate-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:1rem}
+    .affiliate-card{display:block;padding:1rem 1.25rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);text-decoration:none;color:inherit;transition:border-color .2s,box-shadow .2s}
+    .affiliate-card:hover{border-color:var(--primary);box-shadow:0 2px 8px rgba(99,102,241,.12)}
+    .affiliate-label{display:inline-block;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:var(--primary);margin-bottom:.25rem}
+    .affiliate-card strong{display:block;font-size:.95rem;margin-bottom:.2rem}
+    .affiliate-desc{font-size:.82rem;color:var(--text-muted)}
+    .email-capture{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:1rem}
+    .email-capture-text{flex:1;min-width:200px}
+    .email-capture-text strong{display:block;font-size:1rem;margin-bottom:.15rem}
+    .email-capture-text span{font-size:.85rem;color:var(--text-muted)}
+    .email-capture-form{display:flex;gap:.5rem;flex:1;min-width:250px}
+    .email-input{flex:1;padding:.5rem .75rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--bg);color:var(--text);font-size:.9rem}
+    .email-btn{white-space:nowrap}
+    .ip-display{font-size:2rem;font-weight:700;color:var(--primary);text-align:center;padding:1.5rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);margin:1rem 0;font-family:monospace}
+    .info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.75rem;margin:1rem 0}
+    .info-item{padding:.75rem 1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius)}
+    .info-item .info-label{font-size:.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.03em}
+    .info-item .info-value{font-size:1rem;font-weight:600;margin-top:.2rem}
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2850355877461307" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "What Is My IP Address",
+        "url": "https://toolboxkit.netlify.app/ip-lookup.html",
+        "description": "Find your public IP address instantly. Free IP lookup tool shows your IPv4/IPv6 address and basic connection info.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is an IP address?",
+                "acceptedAnswer": { "@type": "Answer", "text": "An IP (Internet Protocol) address is a unique numerical label assigned to every device connected to the internet. It serves as your device's identifier for sending and receiving data online. There are two versions: IPv4 (e.g., 192.168.1.1) and IPv6 (e.g., 2001:0db8::1)." }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the difference between public and private IP?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Your public IP address is assigned by your ISP and is visible to websites you visit. Your private IP is used within your local network (e.g., 192.168.x.x). This tool shows your public IP address." }
+            },
+            {
+                "@type": "Question",
+                "name": "Can someone track me with my IP address?",
+                "acceptedAnswer": { "@type": "Answer", "text": "An IP address can reveal your approximate geographic location (city/region) and your ISP, but it cannot pinpoint your exact physical address. Using a VPN can mask your real IP address for better privacy." }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I hide my IP address?",
+                "acceptedAnswer": { "@type": "Answer", "text": "You can hide your IP address by using a VPN (Virtual Private Network), a proxy server, or the Tor browser. A VPN is the most common and reliable method for everyday use." }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo">🧰 ToolboxKit</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#dev-tools">Developer Tools</a>
+            <a href="/#convert-tools">Converters</a>
+            <a href="/#gen-tools">Generators</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="padding-bottom:1rem">
+        <h1>What Is My IP Address?</h1>
+        <p>Instantly find your public IP address. Free IP lookup tool with basic connection information.</p>
+    </header>
+
+    <!-- Ad: Top -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <main class="tools-container">
+        <div class="tool-area">
+            <p style="text-align:center;color:var(--text-muted);font-size:.9rem" id="ip-loading">Detecting your IP address...</p>
+            <div class="ip-display" id="ip-display" style="display:none"></div>
+
+            <div class="btn-group" style="justify-content:center">
+                <button class="copy-btn" onclick="copyIp()">Copy IP Address</button>
+                <button class="btn" onclick="fetchIp()">Refresh</button>
+            </div>
+
+            <div class="info-grid" id="info-grid"></div>
+        </div>
+    </main>
+
+    <!-- Email Capture -->
+    <div class="tools-container">
+        <div class="email-capture">
+            <div class="email-capture-text">
+                <strong>Get developer tips weekly</strong>
+                <span>Join 500+ devs who get our best tool tips and tricks.</span>
+            </div>
+            <div class="email-capture-form" id="email-form">
+                <input type="email" id="email-input" placeholder="you@example.com" class="email-input">
+                <button class="btn email-btn" onclick="subscribeEmail()">Subscribe</button>
+            </div>
+            <div id="email-success" style="display:none;color:var(--success);font-weight:600">Thanks for subscribing!</div>
+        </div>
+    </div>
+
+    <!-- Ad: Middle -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Related Tools -->
+    <section class="tools-container">
+        <h2>Related Tools</h2>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h3>JSON Formatter</h3>
+                <p>Format, beautify, and validate JSON data.</p>
+                <a href="json-formatter.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>Password Generator</h3>
+                <p>Generate strong, secure passwords.</p>
+                <a href="password-generator.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>Hash Generator</h3>
+                <p>Generate MD5, SHA-1, SHA-256 hashes.</p>
+                <a href="hash-generator.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Affiliate Tools -->
+    <section class="tools-container">
+        <h2>Recommended Tools</h2>
+        <div class="affiliate-cards">
+            <a href="https://nordvpn.com" rel="nofollow sponsored" target="_blank" class="affiliate-card">
+                <span class="affiliate-label">Recommended</span>
+                <strong>Protect your privacy with NordVPN</strong>
+                <span class="affiliate-desc">Secure VPN service for online privacy</span>
+            </a>
+            <a href="https://postman.com" rel="nofollow sponsored" target="_blank" class="affiliate-card">
+                <span class="affiliate-label">Recommended</span>
+                <strong>API testing with Postman</strong>
+                <span class="affiliate-desc">Free API development platform</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="tools-container">
+        <h2>Frequently Asked Questions</h2>
+        <div style="max-width:800px">
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What is an IP address?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">An IP (Internet Protocol) address is a unique numerical label assigned to every device connected to the internet. It serves as your device's identifier for sending and receiving data online.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What is the difference between public and private IP?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Your public IP address is assigned by your ISP and is visible to websites you visit. Your private IP is used within your local network (e.g., 192.168.x.x). This tool shows your public IP address.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">Can someone track me with my IP address?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">An IP address can reveal your approximate geographic location (city/region) and your ISP, but it cannot pinpoint your exact physical address. Using a VPN can mask your real IP address for better privacy.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">How do I hide my IP address?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">You can hide your IP address by using a VPN (Virtual Private Network), a proxy server, or the Tor browser. A VPN is the most common and reliable method for everyday use.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Ad: Bottom -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <footer>
+        <p>ToolboxKit — Free online tools. All processing happens in your browser. No data is sent to any server.</p>
+        <p><a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a></p>
+    </footer>
+
+    <script>
+    function escHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+    function copyText(id) {
+        const text = document.getElementById(id).textContent;
+        navigator.clipboard.writeText(text).then(() => {
+            const btn = event.target;
+            const orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = orig, 1500);
+        });
+    }
+    function subscribeEmail() {
+        const email = document.getElementById('email-input').value;
+        if (!email || !email.includes('@')) { alert('Please enter a valid email.'); return; }
+        let subs = JSON.parse(localStorage.getItem('toolboxkit_subscribers') || '[]');
+        if (!subs.includes(email)) subs.push(email);
+        localStorage.setItem('toolboxkit_subscribers', JSON.stringify(subs));
+        document.getElementById('email-form').style.display = 'none';
+        document.getElementById('email-success').style.display = 'block';
+    }
+
+    let currentIp = '';
+
+    function fetchIp() {
+        document.getElementById('ip-loading').style.display = 'block';
+        document.getElementById('ip-display').style.display = 'none';
+        document.getElementById('info-grid').innerHTML = '';
+
+        // Try ipapi.co for detailed info, fallback to api.ipify.org
+        fetch('https://ipapi.co/json/')
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                currentIp = data.ip;
+                document.getElementById('ip-loading').style.display = 'none';
+                document.getElementById('ip-display').style.display = 'block';
+                document.getElementById('ip-display').textContent = data.ip;
+
+                var infoHtml = '';
+                var items = [
+                    ['IP Version', data.version || (data.ip.includes(':') ? 'IPv6' : 'IPv4')],
+                    ['City', data.city || 'N/A'],
+                    ['Region', data.region || 'N/A'],
+                    ['Country', data.country_name || 'N/A'],
+                    ['ISP', data.org || 'N/A'],
+                    ['Timezone', data.timezone || 'N/A']
+                ];
+                items.forEach(function(item) {
+                    infoHtml += '<div class="info-item"><div class="info-label">' + item[0] + '</div><div class="info-value">' + escHtml(item[1]) + '</div></div>';
+                });
+                document.getElementById('info-grid').innerHTML = infoHtml;
+            })
+            .catch(function() {
+                // Fallback to simple IP
+                fetch('https://api.ipify.org?format=json')
+                    .then(function(r) { return r.json(); })
+                    .then(function(data) {
+                        currentIp = data.ip;
+                        document.getElementById('ip-loading').style.display = 'none';
+                        document.getElementById('ip-display').style.display = 'block';
+                        document.getElementById('ip-display').textContent = data.ip;
+                        document.getElementById('info-grid').innerHTML = '<div class="info-item"><div class="info-label">IP Version</div><div class="info-value">' + (data.ip.includes(':') ? 'IPv6' : 'IPv4') + '</div></div>';
+                    })
+                    .catch(function() {
+                        document.getElementById('ip-loading').textContent = 'Could not detect IP address. Please check your internet connection.';
+                    });
+            });
+    }
+
+    function copyIp() {
+        if (!currentIp) return;
+        navigator.clipboard.writeText(currentIp).then(function() {
+            var btn = event.target;
+            var orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(function() { btn.textContent = orig; }, 1500);
+        });
+    }
+
+    fetchIp();
+    </script>
+</body>
+</html>

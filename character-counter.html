@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Counter for Twitter Instagram TikTok | ToolboxKit</title>
+    <meta name="description" content="Free character counter with live limits for Twitter (280), Instagram (2200), TikTok (150), and YouTube (100). Color-coded warnings when near or over limit.">
+    <meta name="keywords" content="character counter, twitter character limit, instagram character limit, tiktok bio character limit, youtube title length, word counter, letter counter, text length checker">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://toolboxkit.netlify.app/character-counter.html">
+    <meta property="og:title" content="Character Counter for Twitter Instagram TikTok YouTube">
+    <meta property="og:description" content="Live character counter with platform limits. Twitter 280, Instagram 2200, TikTok 150, YouTube 100.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolboxkit.netlify.app/character-counter.html">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    .affiliate-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:1rem}
+    .affiliate-card{display:block;padding:1rem 1.25rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);text-decoration:none;color:inherit;transition:border-color .2s,box-shadow .2s}
+    .affiliate-card:hover{border-color:var(--primary);box-shadow:0 2px 8px rgba(99,102,241,.12)}
+    .affiliate-label{display:inline-block;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:var(--primary);margin-bottom:.25rem}
+    .affiliate-card strong{display:block;font-size:.95rem;margin-bottom:.2rem}
+    .affiliate-desc{font-size:.82rem;color:var(--text-muted)}
+    .email-capture{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:1rem}
+    .email-capture-text{flex:1;min-width:200px}
+    .email-capture-text strong{display:block;font-size:1rem;margin-bottom:.15rem}
+    .email-capture-text span{font-size:.85rem;color:var(--text-muted)}
+    .email-capture-form{display:flex;gap:.5rem;flex:1;min-width:250px}
+    .email-input{flex:1;padding:.5rem .75rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--bg);color:var(--text);font-size:.9rem}
+    .email-btn{white-space:nowrap}
+    .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:.75rem;margin:1rem 0}
+    .stat-box{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:.75rem;text-align:center}
+    .stat-box .stat-num{font-size:1.5rem;font-weight:700;color:var(--primary)}
+    .stat-box .stat-label{font-size:.75rem;color:var(--text-muted);margin-top:.15rem}
+    .limit-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.75rem;margin:1rem 0}
+    .limit-card{padding:.75rem 1rem;border-radius:var(--radius);border:2px solid var(--border);transition:border-color .2s}
+    .limit-card .limit-name{font-weight:600;font-size:.9rem}
+    .limit-card .limit-bar{height:6px;background:var(--border);border-radius:3px;margin:.4rem 0;overflow:hidden}
+    .limit-card .limit-fill{height:100%;border-radius:3px;transition:width .2s,background .2s}
+    .limit-card .limit-text{font-size:.8rem;color:var(--text-muted)}
+    .limit-ok .limit-fill{background:#22c55e}
+    .limit-warn .limit-fill{background:#f59e0b}
+    .limit-warn{border-color:#f59e0b}
+    .limit-over .limit-fill{background:#ef4444}
+    .limit-over{border-color:#ef4444}
+    .limit-over .limit-text{color:#ef4444;font-weight:600}
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2850355877461307" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Character Counter for Social Media",
+        "url": "https://toolboxkit.netlify.app/character-counter.html",
+        "description": "Free character counter with live limits for Twitter, Instagram, TikTok, and YouTube. Color-coded warnings.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the Twitter character limit?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Twitter (X) allows up to 280 characters per tweet for standard accounts. URLs count as 23 characters regardless of length. Twitter Blue/Premium subscribers may have higher limits." }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the Instagram caption character limit?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Instagram allows up to 2,200 characters for post captions. However, only the first 125 characters are shown before the 'more' link, so put your most important text first." }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the TikTok caption character limit?",
+                "acceptedAnswer": { "@type": "Answer", "text": "TikTok allows up to 150 characters for video captions, including hashtags. Keep your captions concise and impactful." }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the YouTube title character limit?",
+                "acceptedAnswer": { "@type": "Answer", "text": "YouTube video titles can be up to 100 characters long. However, titles are truncated in search results at around 60-70 characters, so keep the most important keywords at the beginning." }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo">🧰 ToolboxKit</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#dev-tools">Developer Tools</a>
+            <a href="/#convert-tools">Converters</a>
+            <a href="/#gen-tools">Generators</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="padding-bottom:1rem">
+        <h1>Character Counter</h1>
+        <p>Count characters, words, and sentences with live platform limits for Twitter, Instagram, TikTok, and YouTube.</p>
+    </header>
+
+    <!-- Ad: Top -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <main class="tools-container">
+        <div class="tool-area">
+            <label>Type or paste your text:</label>
+            <textarea id="cc-input" rows="8" placeholder="Start typing here..."></textarea>
+
+            <div class="stats-grid">
+                <div class="stat-box"><div class="stat-num" id="s-chars">0</div><div class="stat-label">Characters</div></div>
+                <div class="stat-box"><div class="stat-num" id="s-chars-ns">0</div><div class="stat-label">Without Spaces</div></div>
+                <div class="stat-box"><div class="stat-num" id="s-words">0</div><div class="stat-label">Words</div></div>
+                <div class="stat-box"><div class="stat-num" id="s-sentences">0</div><div class="stat-label">Sentences</div></div>
+                <div class="stat-box"><div class="stat-num" id="s-paragraphs">0</div><div class="stat-label">Paragraphs</div></div>
+            </div>
+
+            <h3 style="margin-top:1.25rem">Platform Limits</h3>
+            <div class="limit-cards" id="limit-cards">
+                <!-- Generated by JS -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Email Capture -->
+    <div class="tools-container">
+        <div class="email-capture">
+            <div class="email-capture-text">
+                <strong>Get developer tips weekly</strong>
+                <span>Join 500+ devs who get our best tool tips and tricks.</span>
+            </div>
+            <div class="email-capture-form" id="email-form">
+                <input type="email" id="email-input" placeholder="you@example.com" class="email-input">
+                <button class="btn email-btn" onclick="subscribeEmail()">Subscribe</button>
+            </div>
+            <div id="email-success" style="display:none;color:var(--success);font-weight:600">Thanks for subscribing!</div>
+        </div>
+    </div>
+
+    <!-- Ad: Middle -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Related Tools -->
+    <section class="tools-container">
+        <h2>Related Tools</h2>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h3>Word Counter</h3>
+                <p>Count words, characters, sentences, and paragraphs.</p>
+                <a href="word-counter.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>Case Converter</h3>
+                <p>Convert text between different cases.</p>
+                <a href="case-converter.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>Slug Generator</h3>
+                <p>Generate URL-friendly slugs from text.</p>
+                <a href="slug-generator.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Affiliate Tools -->
+    <section class="tools-container">
+        <h2>Recommended Tools</h2>
+        <div class="affiliate-cards">
+            <a href="https://grammarly.com" rel="nofollow sponsored" target="_blank" class="affiliate-card">
+                <span class="affiliate-label">Recommended</span>
+                <strong>Write better with Grammarly</strong>
+                <span class="affiliate-desc">Free grammar and writing assistant</span>
+            </a>
+            <a href="https://notion.so" rel="nofollow sponsored" target="_blank" class="affiliate-card">
+                <span class="affiliate-label">Recommended</span>
+                <strong>Organize with Notion</strong>
+                <span class="affiliate-desc">All-in-one workspace for notes and docs</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="tools-container">
+        <h2>Frequently Asked Questions</h2>
+        <div style="max-width:800px">
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What is the Twitter character limit?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Twitter (X) allows up to 280 characters per tweet for standard accounts. URLs count as 23 characters regardless of length.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What is the Instagram caption character limit?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Instagram allows up to 2,200 characters for post captions. However, only the first 125 characters are shown before the "more" link.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What is the TikTok caption character limit?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">TikTok allows up to 150 characters for video captions, including hashtags. Keep your captions concise and impactful.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What is the YouTube title character limit?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">YouTube video titles can be up to 100 characters long. However, titles are truncated in search results at around 60-70 characters, so keep the most important keywords at the beginning.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Ad: Bottom -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <footer>
+        <p>ToolboxKit — Free online tools. All processing happens in your browser. No data is sent to any server.</p>
+        <p><a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a></p>
+    </footer>
+
+    <script>
+    function escHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+    function copyText(id) {
+        const text = document.getElementById(id).textContent;
+        navigator.clipboard.writeText(text).then(() => {
+            const btn = event.target;
+            const orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = orig, 1500);
+        });
+    }
+    function subscribeEmail() {
+        const email = document.getElementById('email-input').value;
+        if (!email || !email.includes('@')) { alert('Please enter a valid email.'); return; }
+        let subs = JSON.parse(localStorage.getItem('toolboxkit_subscribers') || '[]');
+        if (!subs.includes(email)) subs.push(email);
+        localStorage.setItem('toolboxkit_subscribers', JSON.stringify(subs));
+        document.getElementById('email-form').style.display = 'none';
+        document.getElementById('email-success').style.display = 'block';
+    }
+
+    const platforms = [
+        { name: 'Twitter / X', limit: 280 },
+        { name: 'Instagram Caption', limit: 2200 },
+        { name: 'TikTok Caption', limit: 150 },
+        { name: 'YouTube Title', limit: 100 },
+        { name: 'Meta Description', limit: 160 },
+        { name: 'LinkedIn Post', limit: 3000 }
+    ];
+
+    function updateCounter() {
+        const text = document.getElementById('cc-input').value;
+        const chars = text.length;
+        const charsNs = text.replace(/\s/g, '').length;
+        const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+        const sentences = text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(function(s) { return s.trim().length > 0; }).length;
+        const paragraphs = text.trim() === '' ? 0 : text.split(/\n\n+/).filter(function(p) { return p.trim().length > 0; }).length;
+
+        document.getElementById('s-chars').textContent = chars;
+        document.getElementById('s-chars-ns').textContent = charsNs;
+        document.getElementById('s-words').textContent = words;
+        document.getElementById('s-sentences').textContent = sentences;
+        document.getElementById('s-paragraphs').textContent = paragraphs;
+
+        // Update platform limits
+        const container = document.getElementById('limit-cards');
+        container.innerHTML = platforms.map(function(p) {
+            const pct = Math.min((chars / p.limit) * 100, 100);
+            const status = chars > p.limit ? 'limit-over' : (chars > p.limit * 0.85 ? 'limit-warn' : 'limit-ok');
+            const remaining = p.limit - chars;
+            return '<div class="limit-card ' + status + '">' +
+                '<div class="limit-name">' + p.name + '</div>' +
+                '<div class="limit-bar"><div class="limit-fill" style="width:' + pct + '%"></div></div>' +
+                '<div class="limit-text">' + chars + ' / ' + p.limit + (remaining < 0 ? ' (' + Math.abs(remaining) + ' over)' : ' (' + remaining + ' left)') + '</div>' +
+                '</div>';
+        }).join('');
+    }
+
+    document.getElementById('cc-input').addEventListener('input', updateCounter);
+    updateCounter();
+    </script>
+</body>
+</html>

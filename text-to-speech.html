@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Speech Online - Free TTS Tool | ToolboxKit</title>
+    <meta name="description" content="Convert text to speech online for free using your browser. Choose from multiple voices, adjust speed and pitch. No downloads or signup required.">
+    <meta name="keywords" content="text to speech, tts online, text to speech converter, free tts tool, read text aloud, speech synthesis, text reader online, voice generator">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://toolboxkit.netlify.app/text-to-speech.html">
+    <meta property="og:title" content="Text to Speech Online - Free TTS Tool">
+    <meta property="og:description" content="Convert text to speech in your browser. Multiple voices, adjustable speed and pitch. Free and private.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolboxkit.netlify.app/text-to-speech.html">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    .affiliate-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:1rem}
+    .affiliate-card{display:block;padding:1rem 1.25rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);text-decoration:none;color:inherit;transition:border-color .2s,box-shadow .2s}
+    .affiliate-card:hover{border-color:var(--primary);box-shadow:0 2px 8px rgba(99,102,241,.12)}
+    .affiliate-label{display:inline-block;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:var(--primary);margin-bottom:.25rem}
+    .affiliate-card strong{display:block;font-size:.95rem;margin-bottom:.2rem}
+    .affiliate-desc{font-size:.82rem;color:var(--text-muted)}
+    .email-capture{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:1rem}
+    .email-capture-text{flex:1;min-width:200px}
+    .email-capture-text strong{display:block;font-size:1rem;margin-bottom:.15rem}
+    .email-capture-text span{font-size:.85rem;color:var(--text-muted)}
+    .email-capture-form{display:flex;gap:.5rem;flex:1;min-width:250px}
+    .email-input{flex:1;padding:.5rem .75rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--bg);color:var(--text);font-size:.9rem}
+    .email-btn{white-space:nowrap}
+    .tts-controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin:1rem 0}
+    .tts-control label{display:block;font-size:.85rem;margin-bottom:.3rem}
+    .tts-control select,.tts-control input[type=range]{width:100%;padding:.35rem .5rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);color:var(--text)}
+    .tts-control .range-value{font-size:.8rem;color:var(--text-muted);text-align:right}
+    .playback-btns{display:flex;gap:.75rem;margin-top:1rem}
+    .playback-btns button{font-size:1rem;padding:.6rem 1.5rem}
+    .tts-status{margin-top:.75rem;font-size:.9rem;color:var(--text-muted)}
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2850355877461307" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Text to Speech Online",
+        "url": "https://toolboxkit.netlify.app/text-to-speech.html",
+        "description": "Convert text to speech in your browser. Multiple voices, adjustable speed and pitch. Free and private.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What voices are available?",
+                "acceptedAnswer": { "@type": "Answer", "text": "The available voices depend on your operating system and browser. Most systems provide multiple English voices (male and female), and many also include voices for other languages like Spanish, French, German, Japanese, and more." }
+            },
+            {
+                "@type": "Question",
+                "name": "Does this tool work offline?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes, once the page is loaded, the Text to Speech functionality uses your browser's built-in SpeechSynthesis API. No internet connection is needed for the actual speech synthesis, though some browser voices may require it." }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I download the audio?",
+                "acceptedAnswer": { "@type": "Answer", "text": "The browser's SpeechSynthesis API does not natively support downloading audio files. This tool plays the speech directly through your speakers. For downloadable audio, you would need a server-side TTS service." }
+            },
+            {
+                "@type": "Question",
+                "name": "Is there a character limit?",
+                "acceptedAnswer": { "@type": "Answer", "text": "There is no hard limit in this tool, but some browsers may have internal limits on the SpeechSynthesis API (typically around 32,000 characters). For very long texts, the tool automatically splits them into smaller chunks." }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo">🧰 ToolboxKit</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#dev-tools">Developer Tools</a>
+            <a href="/#convert-tools">Converters</a>
+            <a href="/#gen-tools">Generators</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="padding-bottom:1rem">
+        <h1>Text to Speech Online</h1>
+        <p>Convert any text to speech using your browser. Choose from multiple voices, adjust speed and pitch. Free, private, and no signup needed.</p>
+    </header>
+
+    <!-- Ad: Top -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <main class="tools-container">
+        <div class="tool-area">
+            <label>Enter text to read aloud:</label>
+            <textarea id="tts-input" rows="8" placeholder="Type or paste text here. Click Play to hear it spoken aloud."></textarea>
+
+            <div class="tts-controls">
+                <div class="tts-control">
+                    <label>Voice:</label>
+                    <select id="tts-voice"></select>
+                </div>
+                <div class="tts-control">
+                    <label>Speed: <span id="speed-val">1.0</span></label>
+                    <input type="range" id="tts-speed" min="0.25" max="3" step="0.25" value="1" oninput="document.getElementById('speed-val').textContent=this.value">
+                </div>
+                <div class="tts-control">
+                    <label>Pitch: <span id="pitch-val">1.0</span></label>
+                    <input type="range" id="tts-pitch" min="0" max="2" step="0.1" value="1" oninput="document.getElementById('pitch-val').textContent=this.value">
+                </div>
+            </div>
+
+            <div class="playback-btns">
+                <button class="btn" onclick="ttsPlay()">Play</button>
+                <button class="btn" onclick="ttsPause()">Pause</button>
+                <button class="btn" onclick="ttsResume()">Resume</button>
+                <button class="btn" onclick="ttsStop()">Stop</button>
+            </div>
+
+            <div class="tts-status" id="tts-status"></div>
+        </div>
+    </main>
+
+    <!-- Email Capture -->
+    <div class="tools-container">
+        <div class="email-capture">
+            <div class="email-capture-text">
+                <strong>Get developer tips weekly</strong>
+                <span>Join 500+ devs who get our best tool tips and tricks.</span>
+            </div>
+            <div class="email-capture-form" id="email-form">
+                <input type="email" id="email-input" placeholder="you@example.com" class="email-input">
+                <button class="btn email-btn" onclick="subscribeEmail()">Subscribe</button>
+            </div>
+            <div id="email-success" style="display:none;color:var(--success);font-weight:600">Thanks for subscribing!</div>
+        </div>
+    </div>
+
+    <!-- Ad: Middle -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Related Tools -->
+    <section class="tools-container">
+        <h2>Related Tools</h2>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h3>Word Counter</h3>
+                <p>Count words, characters, sentences, and paragraphs.</p>
+                <a href="word-counter.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>Character Counter</h3>
+                <p>Count characters with social media limits.</p>
+                <a href="character-counter.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>Case Converter</h3>
+                <p>Convert text between different cases.</p>
+                <a href="case-converter.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Affiliate Tools -->
+    <section class="tools-container">
+        <h2>Recommended Tools</h2>
+        <div class="affiliate-cards">
+            <a href="https://grammarly.com" rel="nofollow sponsored" target="_blank" class="affiliate-card">
+                <span class="affiliate-label">Recommended</span>
+                <strong>Write better with Grammarly</strong>
+                <span class="affiliate-desc">Free grammar and writing assistant</span>
+            </a>
+            <a href="https://notion.so" rel="nofollow sponsored" target="_blank" class="affiliate-card">
+                <span class="affiliate-label">Recommended</span>
+                <strong>Organize with Notion</strong>
+                <span class="affiliate-desc">All-in-one workspace for notes and docs</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="tools-container">
+        <h2>Frequently Asked Questions</h2>
+        <div style="max-width:800px">
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What voices are available?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">The available voices depend on your operating system and browser. Most systems provide multiple English voices (male and female), and many also include voices for other languages.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">Does this tool work offline?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Yes, once the page is loaded, the Text to Speech functionality uses your browser's built-in SpeechSynthesis API. No internet connection is needed for the actual speech synthesis.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">Can I download the audio?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">The browser's SpeechSynthesis API does not natively support downloading audio files. This tool plays the speech directly through your speakers.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">Is there a character limit?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">There is no hard limit in this tool, but some browsers may have internal limits on the SpeechSynthesis API (typically around 32,000 characters).</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Ad: Bottom -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <footer>
+        <p>ToolboxKit — Free online tools. All processing happens in your browser. No data is sent to any server.</p>
+        <p><a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a></p>
+    </footer>
+
+    <script>
+    function escHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+    function copyText(id) {
+        const text = document.getElementById(id).textContent;
+        navigator.clipboard.writeText(text).then(() => {
+            const btn = event.target;
+            const orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = orig, 1500);
+        });
+    }
+    function subscribeEmail() {
+        const email = document.getElementById('email-input').value;
+        if (!email || !email.includes('@')) { alert('Please enter a valid email.'); return; }
+        let subs = JSON.parse(localStorage.getItem('toolboxkit_subscribers') || '[]');
+        if (!subs.includes(email)) subs.push(email);
+        localStorage.setItem('toolboxkit_subscribers', JSON.stringify(subs));
+        document.getElementById('email-form').style.display = 'none';
+        document.getElementById('email-success').style.display = 'block';
+    }
+
+    const synth = window.speechSynthesis;
+    let voices = [];
+
+    function loadVoices() {
+        voices = synth.getVoices();
+        const select = document.getElementById('tts-voice');
+        select.innerHTML = '';
+        voices.forEach(function(v, i) {
+            const opt = document.createElement('option');
+            opt.value = i;
+            opt.textContent = v.name + ' (' + v.lang + ')' + (v.default ? ' — DEFAULT' : '');
+            select.appendChild(opt);
+        });
+    }
+
+    loadVoices();
+    if (synth.onvoiceschanged !== undefined) {
+        synth.onvoiceschanged = loadVoices;
+    }
+
+    function ttsPlay() {
+        const text = document.getElementById('tts-input').value;
+        if (!text.trim()) { alert('Please enter some text.'); return; }
+        synth.cancel();
+        const utterance = new SpeechSynthesisUtterance(text);
+        const voiceIndex = document.getElementById('tts-voice').value;
+        if (voices[voiceIndex]) utterance.voice = voices[voiceIndex];
+        utterance.rate = parseFloat(document.getElementById('tts-speed').value);
+        utterance.pitch = parseFloat(document.getElementById('tts-pitch').value);
+        utterance.onstart = function() { document.getElementById('tts-status').textContent = 'Speaking...'; };
+        utterance.onend = function() { document.getElementById('tts-status').textContent = 'Done.'; };
+        utterance.onerror = function(e) { document.getElementById('tts-status').textContent = 'Error: ' + e.error; };
+        synth.speak(utterance);
+    }
+
+    function ttsPause() {
+        synth.pause();
+        document.getElementById('tts-status').textContent = 'Paused.';
+    }
+
+    function ttsResume() {
+        synth.resume();
+        document.getElementById('tts-status').textContent = 'Resumed...';
+    }
+
+    function ttsStop() {
+        synth.cancel();
+        document.getElementById('tts-status').textContent = 'Stopped.';
+    }
+    </script>
+</body>
+</html>
