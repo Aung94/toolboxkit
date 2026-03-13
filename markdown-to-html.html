@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown to HTML Converter Online - Free MD to HTML | ToolboxKit</title>
+    <meta name="description" content="Convert Markdown to HTML instantly online. Supports headings, bold, italic, links, lists, code blocks, and blockquotes. Free, no signup required.">
+    <meta name="keywords" content="markdown to html, md to html converter, markdown converter online, markdown parser, convert markdown, markdown to html online, free markdown tool">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://toolboxkit.netlify.app/markdown-to-html.html">
+    <meta property="og:title" content="Markdown to HTML Converter Online - Free MD to HTML">
+    <meta property="og:description" content="Convert Markdown to clean HTML instantly. Supports headings, bold, italic, links, lists, code blocks, and blockquotes.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolboxkit.netlify.app/markdown-to-html.html">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    .affiliate-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:1rem}
+    .affiliate-card{display:block;padding:1rem 1.25rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);text-decoration:none;color:inherit;transition:border-color .2s,box-shadow .2s}
+    .affiliate-card:hover{border-color:var(--primary);box-shadow:0 2px 8px rgba(99,102,241,.12)}
+    .affiliate-label{display:inline-block;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:var(--primary);margin-bottom:.25rem}
+    .affiliate-card strong{display:block;font-size:.95rem;margin-bottom:.2rem}
+    .affiliate-desc{font-size:.82rem;color:var(--text-muted)}
+    .email-capture{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:1rem}
+    .email-capture-text{flex:1;min-width:200px}
+    .email-capture-text strong{display:block;font-size:1rem;margin-bottom:.15rem}
+    .email-capture-text span{font-size:.85rem;color:var(--text-muted)}
+    .email-capture-form{display:flex;gap:.5rem;flex:1;min-width:250px}
+    .email-input{flex:1;padding:.5rem .75rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--bg);color:var(--text);font-size:.9rem}
+    .email-btn{white-space:nowrap}
+    .split-pane{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    @media(max-width:768px){.split-pane{grid-template-columns:1fr}}
+    .preview-box{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;min-height:200px;overflow:auto}
+    .preview-box h1,.preview-box h2,.preview-box h3,.preview-box h4,.preview-box h5,.preview-box h6{margin:0.5em 0 0.3em}
+    .preview-box pre{background:var(--bg);padding:0.75rem;border-radius:var(--radius);overflow-x:auto}
+    .preview-box code{background:var(--bg);padding:0.15em 0.3em;border-radius:3px;font-size:0.9em}
+    .preview-box pre code{background:none;padding:0}
+    .preview-box blockquote{border-left:3px solid var(--primary);margin:0.5em 0;padding:0.5em 1em;color:var(--text-muted)}
+    .preview-box ul,.preview-box ol{padding-left:1.5em}
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2850355877461307" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Markdown to HTML Converter Online",
+        "url": "https://toolboxkit.netlify.app/markdown-to-html.html",
+        "description": "Convert Markdown to clean HTML instantly. Supports headings, bold, italic, links, lists, code blocks, and blockquotes.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What Markdown syntax does this converter support?",
+                "acceptedAnswer": { "@type": "Answer", "text": "This converter supports headings (# to ######), bold (**text**), italic (*text*), links [text](url), unordered lists (- or *), ordered lists (1.), inline code (`code`), fenced code blocks (```), blockquotes (>), and horizontal rules (---)." }
+            },
+            {
+                "@type": "Question",
+                "name": "Is my Markdown data sent to a server?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. The conversion happens entirely in your browser using JavaScript. No data is transmitted to any server." }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use this for GitHub-flavored Markdown?",
+                "acceptedAnswer": { "@type": "Answer", "text": "This tool supports the most common Markdown features used in GitHub READMEs including headings, lists, code blocks, bold, italic, links, and blockquotes." }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I copy the generated HTML?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Click the 'Copy HTML' button below the output area. The raw HTML markup will be copied to your clipboard." }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo">🧰 ToolboxKit</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#dev-tools">Developer Tools</a>
+            <a href="/#convert-tools">Converters</a>
+            <a href="/#gen-tools">Generators</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="padding-bottom:1rem">
+        <h1>Markdown to HTML Converter</h1>
+        <p>Convert Markdown to clean HTML instantly. Live preview with support for headings, bold, italic, links, lists, code blocks, and blockquotes.</p>
+    </header>
+
+    <!-- Ad: Top -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <main class="tools-container">
+        <div class="tool-area">
+            <div class="split-pane">
+                <div>
+                    <label>Markdown Input:</label>
+                    <textarea id="md-input" rows="14" placeholder="# Hello World
+
+This is **bold** and *italic* text.
+
+- List item 1
+- List item 2
+
+[Link](https://example.com)
+
+> Blockquote here
+
+`inline code`
+
+```
+code block
+```"></textarea>
+                </div>
+                <div>
+                    <label>HTML Preview:</label>
+                    <div class="preview-box" id="md-preview"></div>
+                </div>
+            </div>
+            <div class="btn-group" style="margin-top:1rem">
+                <button class="btn" onclick="convertMd()">Convert</button>
+                <button class="btn" onclick="showRawHtml()">Show Raw HTML</button>
+                <button class="copy-btn" onclick="copyHtml()">Copy HTML</button>
+            </div>
+            <label style="margin-top:1rem;display:block">Raw HTML Output:</label>
+            <div class="output-box" id="md-output" style="min-height:100px"></div>
+        </div>
+    </main>
+
+    <!-- Email Capture -->
+    <div class="tools-container">
+        <div class="email-capture">
+            <div class="email-capture-text">
+                <strong>Get developer tips weekly</strong>
+                <span>Join 500+ devs who get our best tool tips and tricks.</span>
+            </div>
+            <div class="email-capture-form" id="email-form">
+                <input type="email" id="email-input" placeholder="you@example.com" class="email-input">
+                <button class="btn email-btn" onclick="subscribeEmail()">Subscribe</button>
+            </div>
+            <div id="email-success" style="display:none;color:var(--success);font-weight:600">Thanks for subscribing!</div>
+        </div>
+    </div>
+
+    <!-- Ad: Middle -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Related Tools -->
+    <section class="tools-container">
+        <h2>Related Tools</h2>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h3>HTML Entity Encoder</h3>
+                <p>Encode and decode HTML entities instantly.</p>
+                <a href="html-entity-encoder.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>JSON Formatter</h3>
+                <p>Format, beautify, and validate JSON data.</p>
+                <a href="json-formatter.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>Word Counter</h3>
+                <p>Count words, characters, sentences, and paragraphs.</p>
+                <a href="word-counter.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Affiliate Tools -->
+    <section class="tools-container">
+        <h2>Recommended Tools</h2>
+        <div class="affiliate-cards">
+            <a href="https://vercel.com" rel="nofollow sponsored" target="_blank" class="affiliate-card">
+                <span class="affiliate-label">Recommended</span>
+                <strong>Deploy with Vercel</strong>
+                <span class="affiliate-desc">Free hosting for frontend projects</span>
+            </a>
+            <a href="https://notion.so" rel="nofollow sponsored" target="_blank" class="affiliate-card">
+                <span class="affiliate-label">Recommended</span>
+                <strong>Organize with Notion</strong>
+                <span class="affiliate-desc">All-in-one workspace for notes and docs</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="tools-container">
+        <h2>Frequently Asked Questions</h2>
+        <div style="max-width:800px">
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What Markdown syntax does this converter support?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">This converter supports headings (# to ######), bold (**text**), italic (*text*), links [text](url), unordered lists (- or *), ordered lists (1.), inline code (`code`), fenced code blocks (```), blockquotes (>), and horizontal rules (---).</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">Is my Markdown data sent to a server?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">No. The conversion happens entirely in your browser using JavaScript. No data is transmitted to any server.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">Can I use this for GitHub-flavored Markdown?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">This tool supports the most common Markdown features used in GitHub READMEs including headings, lists, code blocks, bold, italic, links, and blockquotes.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">How do I copy the generated HTML?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Click the "Copy HTML" button below the output area. The raw HTML markup will be copied to your clipboard.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Ad: Bottom -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <footer>
+        <p>ToolboxKit — Free online tools. All processing happens in your browser. No data is sent to any server.</p>
+        <p><a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a></p>
+    </footer>
+
+    <script>
+    function escHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+    function copyText(id) {
+        const text = document.getElementById(id).textContent;
+        navigator.clipboard.writeText(text).then(() => {
+            const btn = event.target;
+            const orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = orig, 1500);
+        });
+    }
+    function subscribeEmail() {
+        const email = document.getElementById('email-input').value;
+        if (!email || !email.includes('@')) { alert('Please enter a valid email.'); return; }
+        let subs = JSON.parse(localStorage.getItem('toolboxkit_subscribers') || '[]');
+        if (!subs.includes(email)) subs.push(email);
+        localStorage.setItem('toolboxkit_subscribers', JSON.stringify(subs));
+        document.getElementById('email-form').style.display = 'none';
+        document.getElementById('email-success').style.display = 'block';
+    }
+
+    function markdownToHtml(md) {
+        let html = md;
+        // Fenced code blocks
+        html = html.replace(/```(\w*)\n([\s\S]*?)```/g, function(m, lang, code) {
+            return '<pre><code>' + escHtml(code.trim()) + '</code></pre>';
+        });
+        // Blockquotes
+        html = html.replace(/^>\s?(.*)$/gm, '<blockquote>$1</blockquote>');
+        html = html.replace(/<\/blockquote>\n<blockquote>/g, '\n');
+        // Headings
+        html = html.replace(/^######\s+(.*)$/gm, '<h6>$1</h6>');
+        html = html.replace(/^#####\s+(.*)$/gm, '<h5>$1</h5>');
+        html = html.replace(/^####\s+(.*)$/gm, '<h4>$1</h4>');
+        html = html.replace(/^###\s+(.*)$/gm, '<h3>$1</h3>');
+        html = html.replace(/^##\s+(.*)$/gm, '<h2>$1</h2>');
+        html = html.replace(/^#\s+(.*)$/gm, '<h1>$1</h1>');
+        // Horizontal rules
+        html = html.replace(/^---+$/gm, '<hr>');
+        // Bold and italic
+        html = html.replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>');
+        html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+        html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
+        // Inline code
+        html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+        // Links
+        html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+        // Images
+        html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1">');
+        // Unordered lists
+        html = html.replace(/^[\*\-]\s+(.*)$/gm, '<li>$1</li>');
+        html = html.replace(/(<li>.*<\/li>\n?)+/g, function(m) {
+            return '<ul>' + m.trim() + '</ul>';
+        });
+        // Ordered lists
+        html = html.replace(/^\d+\.\s+(.*)$/gm, '<oli>$1</oli>');
+        html = html.replace(/(<oli>.*<\/oli>\n?)+/g, function(m) {
+            return '<ol>' + m.replace(/<\/?oli>/g, function(t) { return t.replace('oli', 'li'); }) + '</ol>';
+        });
+        // Paragraphs
+        html = html.replace(/\n{2,}/g, '\n\n');
+        const lines = html.split('\n\n');
+        html = lines.map(function(block) {
+            block = block.trim();
+            if (!block) return '';
+            if (/^<[a-z]/.test(block)) return block;
+            return '<p>' + block.replace(/\n/g, '<br>') + '</p>';
+        }).join('\n');
+        return html;
+    }
+
+    let lastHtml = '';
+    function convertMd() {
+        const md = document.getElementById('md-input').value;
+        lastHtml = markdownToHtml(md);
+        document.getElementById('md-preview').innerHTML = lastHtml;
+        document.getElementById('md-output').textContent = '';
+    }
+    function showRawHtml() {
+        if (!lastHtml) convertMd();
+        document.getElementById('md-output').textContent = lastHtml;
+    }
+    function copyHtml() {
+        if (!lastHtml) convertMd();
+        navigator.clipboard.writeText(lastHtml).then(() => {
+            const btn = event.target;
+            const orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = orig, 1500);
+        });
+    }
+
+    // Live preview
+    document.getElementById('md-input').addEventListener('input', convertMd);
+    </script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON to CSV Converter Online - Free JSON to CSV | ToolboxKit</title>
+    <meta name="description" content="Convert JSON arrays to CSV format instantly online. Handles nested objects by flattening keys. Download as .csv file. Free, no signup required.">
+    <meta name="keywords" content="json to csv, json to csv converter, convert json to csv online, json array to csv, json csv download, json export csv, free json converter">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://toolboxkit.netlify.app/json-to-csv.html">
+    <meta property="og:title" content="JSON to CSV Converter Online - Free JSON to CSV">
+    <meta property="og:description" content="Convert JSON arrays to CSV format instantly. Handles nested objects, download as .csv file.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolboxkit.netlify.app/json-to-csv.html">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    .affiliate-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:1rem}
+    .affiliate-card{display:block;padding:1rem 1.25rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);text-decoration:none;color:inherit;transition:border-color .2s,box-shadow .2s}
+    .affiliate-card:hover{border-color:var(--primary);box-shadow:0 2px 8px rgba(99,102,241,.12)}
+    .affiliate-label{display:inline-block;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:var(--primary);margin-bottom:.25rem}
+    .affiliate-card strong{display:block;font-size:.95rem;margin-bottom:.2rem}
+    .affiliate-desc{font-size:.82rem;color:var(--text-muted)}
+    .email-capture{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:1rem}
+    .email-capture-text{flex:1;min-width:200px}
+    .email-capture-text strong{display:block;font-size:1rem;margin-bottom:.15rem}
+    .email-capture-text span{font-size:.85rem;color:var(--text-muted)}
+    .email-capture-form{display:flex;gap:.5rem;flex:1;min-width:250px}
+    .email-input{flex:1;padding:.5rem .75rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--bg);color:var(--text);font-size:.9rem}
+    .email-btn{white-space:nowrap}
+    .csv-table{width:100%;border-collapse:collapse;margin-top:1rem;font-size:.85rem;overflow-x:auto;display:block}
+    .csv-table th,.csv-table td{border:1px solid var(--border);padding:.4rem .6rem;text-align:left}
+    .csv-table th{background:var(--surface);font-weight:600}
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2850355877461307" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "JSON to CSV Converter Online",
+        "url": "https://toolboxkit.netlify.app/json-to-csv.html",
+        "description": "Convert JSON arrays to CSV format instantly. Handles nested objects by flattening keys. Download as .csv file.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What JSON format does this converter accept?",
+                "acceptedAnswer": { "@type": "Answer", "text": "This tool accepts a JSON array of objects, e.g., [{\"name\":\"John\",\"age\":30},{\"name\":\"Jane\",\"age\":25}]. Each object in the array becomes a row in the CSV output." }
+            },
+            {
+                "@type": "Question",
+                "name": "How does the converter handle nested JSON objects?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Nested objects are flattened using dot notation. For example, {\"address\":{\"city\":\"NYC\"}} becomes a column named 'address.city' with the value 'NYC'." }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I download the CSV file?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Click the 'Download CSV' button to save the converted data as a .csv file to your computer." }
+            },
+            {
+                "@type": "Question",
+                "name": "Is my data safe?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. All conversion happens in your browser. No data is uploaded to any server." }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo">🧰 ToolboxKit</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#dev-tools">Developer Tools</a>
+            <a href="/#convert-tools">Converters</a>
+            <a href="/#gen-tools">Generators</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="padding-bottom:1rem">
+        <h1>JSON to CSV Converter</h1>
+        <p>Paste a JSON array of objects and convert it to CSV format instantly. Handles nested objects by flattening keys with dot notation.</p>
+    </header>
+
+    <!-- Ad: Top -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <main class="tools-container">
+        <div class="tool-area">
+            <label>Paste JSON Array:</label>
+            <textarea id="json-input" rows="10" placeholder='[
+  {"name": "Alice", "age": 30, "city": "New York"},
+  {"name": "Bob", "age": 25, "city": "London"}
+]'></textarea>
+            <div class="btn-group">
+                <button class="btn" onclick="convertJsonToCsv()">Convert to CSV</button>
+                <button class="btn" onclick="downloadCsv()">Download CSV</button>
+                <button class="copy-btn" onclick="copyText('csv-output')">Copy CSV</button>
+            </div>
+            <div id="csv-status" style="margin:0.5rem 0;font-size:0.9rem"></div>
+            <label>CSV Output:</label>
+            <div class="output-box" id="csv-output" style="min-height:100px;white-space:pre"></div>
+            <div id="csv-table-container"></div>
+        </div>
+    </main>
+
+    <!-- Email Capture -->
+    <div class="tools-container">
+        <div class="email-capture">
+            <div class="email-capture-text">
+                <strong>Get developer tips weekly</strong>
+                <span>Join 500+ devs who get our best tool tips and tricks.</span>
+            </div>
+            <div class="email-capture-form" id="email-form">
+                <input type="email" id="email-input" placeholder="you@example.com" class="email-input">
+                <button class="btn email-btn" onclick="subscribeEmail()">Subscribe</button>
+            </div>
+            <div id="email-success" style="display:none;color:var(--success);font-weight:600">Thanks for subscribing!</div>
+        </div>
+    </div>
+
+    <!-- Ad: Middle -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Related Tools -->
+    <section class="tools-container">
+        <h2>Related Tools</h2>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h3>JSON Formatter</h3>
+                <p>Format, beautify, and validate JSON data.</p>
+                <a href="json-formatter.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>JSON to YAML</h3>
+                <p>Convert between JSON and YAML formats.</p>
+                <a href="json-to-yaml.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+            <div class="tool-card">
+                <h3>Base64 Encoder</h3>
+                <p>Encode or decode Base64 strings instantly.</p>
+                <a href="base64.html" class="btn" style="text-decoration:none;display:inline-block">Open Tool →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Affiliate Tools -->
+    <section class="tools-container">
+        <h2>Recommended Tools</h2>
+        <div class="affiliate-cards">
+            <a href="https://postman.com" rel="nofollow sponsored" target="_blank" class="affiliate-card">
+                <span class="affiliate-label">Recommended</span>
+                <strong>API testing with Postman</strong>
+                <span class="affiliate-desc">Free API development platform</span>
+            </a>
+            <a href="https://vercel.com" rel="nofollow sponsored" target="_blank" class="affiliate-card">
+                <span class="affiliate-label">Recommended</span>
+                <strong>Build faster with Vercel</strong>
+                <span class="affiliate-desc">Free hosting for frontend projects</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="tools-container">
+        <h2>Frequently Asked Questions</h2>
+        <div style="max-width:800px">
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">What JSON format does this converter accept?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">This tool accepts a JSON array of objects, e.g., [{"name":"John","age":30}]. Each object in the array becomes a row in the CSV output.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">How does the converter handle nested JSON objects?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Nested objects are flattened using dot notation. For example, {"address":{"city":"NYC"}} becomes a column named "address.city" with the value "NYC".</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">Can I download the CSV file?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Yes. Click the "Download CSV" button to save the converted data as a .csv file to your computer.</p>
+            </details>
+            <details style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem">
+                <summary style="cursor:pointer;font-weight:600">Is my data safe?</summary>
+                <p style="margin-top:0.75rem;color:var(--text-muted)">Absolutely. All conversion happens in your browser. No data is uploaded to any server.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Ad: Bottom -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2850355877461307" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <footer>
+        <p>ToolboxKit — Free online tools. All processing happens in your browser. No data is sent to any server.</p>
+        <p><a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a></p>
+    </footer>
+
+    <script>
+    function escHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+    function copyText(id) {
+        const text = document.getElementById(id).textContent;
+        navigator.clipboard.writeText(text).then(() => {
+            const btn = event.target;
+            const orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = orig, 1500);
+        });
+    }
+    function subscribeEmail() {
+        const email = document.getElementById('email-input').value;
+        if (!email || !email.includes('@')) { alert('Please enter a valid email.'); return; }
+        let subs = JSON.parse(localStorage.getItem('toolboxkit_subscribers') || '[]');
+        if (!subs.includes(email)) subs.push(email);
+        localStorage.setItem('toolboxkit_subscribers', JSON.stringify(subs));
+        document.getElementById('email-form').style.display = 'none';
+        document.getElementById('email-success').style.display = 'block';
+    }
+
+    function flattenObj(obj, prefix) {
+        prefix = prefix || '';
+        var result = {};
+        for (var key in obj) {
+            if (!obj.hasOwnProperty(key)) continue;
+            var fullKey = prefix ? prefix + '.' + key : key;
+            if (typeof obj[key] === 'object' && obj[key] !== null && !Array.isArray(obj[key])) {
+                var nested = flattenObj(obj[key], fullKey);
+                for (var nk in nested) result[nk] = nested[nk];
+            } else if (Array.isArray(obj[key])) {
+                result[fullKey] = JSON.stringify(obj[key]);
+            } else {
+                result[fullKey] = obj[key];
+            }
+        }
+        return result;
+    }
+
+    let csvData = '';
+
+    function convertJsonToCsv() {
+        const input = document.getElementById('json-input').value;
+        const status = document.getElementById('csv-status');
+        const output = document.getElementById('csv-output');
+        const tableContainer = document.getElementById('csv-table-container');
+        try {
+            let data = JSON.parse(input);
+            if (!Array.isArray(data)) {
+                if (typeof data === 'object') data = [data];
+                else throw new Error('Input must be a JSON array of objects.');
+            }
+            const flat = data.map(function(row) { return flattenObj(row); });
+            const headers = [];
+            flat.forEach(function(row) {
+                Object.keys(row).forEach(function(k) {
+                    if (headers.indexOf(k) === -1) headers.push(k);
+                });
+            });
+            const csvRows = [headers.map(function(h) { return '"' + h.replace(/"/g, '""') + '"'; }).join(',')];
+            flat.forEach(function(row) {
+                csvRows.push(headers.map(function(h) {
+                    var val = row[h] !== undefined ? String(row[h]) : '';
+                    return '"' + val.replace(/"/g, '""') + '"';
+                }).join(','));
+            });
+            csvData = csvRows.join('\n');
+            output.textContent = csvData;
+            status.innerHTML = '<span style="color:var(--success)">Converted ' + data.length + ' rows with ' + headers.length + ' columns</span>';
+            // Build preview table
+            var thtml = '<table class="csv-table"><thead><tr>';
+            headers.forEach(function(h) { thtml += '<th>' + escHtml(h) + '</th>'; });
+            thtml += '</tr></thead><tbody>';
+            flat.slice(0, 50).forEach(function(row) {
+                thtml += '<tr>';
+                headers.forEach(function(h) { thtml += '<td>' + escHtml(row[h] !== undefined ? String(row[h]) : '') + '</td>'; });
+                thtml += '</tr>';
+            });
+            thtml += '</tbody></table>';
+            tableContainer.innerHTML = thtml;
+        } catch (e) {
+            status.innerHTML = '<span style="color:var(--danger)">Error: ' + escHtml(e.message) + '</span>';
+            output.textContent = '';
+            tableContainer.innerHTML = '';
+            csvData = '';
+        }
+    }
+
+    function downloadCsv() {
+        if (!csvData) { convertJsonToCsv(); if (!csvData) return; }
+        const blob = new Blob([csvData], { type: 'text/csv' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url; a.download = 'data.csv'; a.click();
+        URL.revokeObjectURL(url);
+    }
+    </script>
+</body>
+</html>
